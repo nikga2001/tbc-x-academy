@@ -1,0 +1,102 @@
+.summary-card {
+  background: #0ed01e;
+  border-radius: 14px;
+  padding: 1.2em 1em;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  box-shadow: 0 2px 8px #86bb1b33;
+}
+
+.money-flow,
+.my-savings,
+.transactions,
+.all-expenses {
+  background: #f8fafd;
+  border-radius: 18px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px #e9f2fa33;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.filter,
+.view-more {
+  color: #00c6ae;
+  font-size: 0.95em;
+  cursor: pointer;
+}
+.chart-placeholder,
+.pie-chart-placeholder {
+  width: 100%;
+  height: 120px;
+  background: repeating-linear-gradient(
+    135deg,
+    #e0e7ef,
+    #e0e7ef 10px,
+    #f8fafd 10px,
+    #f8fafd 20px
+  );
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b0b8c1;
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+.savings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.savings-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  font-size: 1em;
+}
+.savings-list .icon {
+  margin-right: 0.7em;
+  font-size: 1.2em;
+}
+.savings-list .amount {
+  font-weight: bold;
+  color: #232b4d;
+}
+.all-expenses .expenses-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.expenses-breakdown {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.expenses-breakdown div {
+  font-size: 0.98em;
+}
+.expenses-breakdown b {
+  color: #232b4d;
+}
+.expenses-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.expenses-list .amount {
+  font-weight: bold;
+  color: #00c6ae;
+  margin-left: 0.5em;
+}

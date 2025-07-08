@@ -1,0 +1,115 @@
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 2vw;
+  }
+  .dashboard-main {
+    padding: 1vw;
+    gap: 1vw;
+  }
+  .summary-cards {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  .my-cards,
+  .quick-transfer,
+  .money-flow,
+  .my-savings,
+  .transactions,
+  .all-expenses {
+    padding: 1em;
+  }
+}
+.add-card {
+  background: linear-gradient(90deg, #00c6ae 0%, #232b4d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 0.85em 2.4em;
+  font-size: 1.18em;
+  font-weight: 700;
+  box-shadow: 0 6px 24px #00c6ae33, 0 1.5px 4px #232b4d22;
+  cursor: pointer;
+  transition: background 0.22s, box-shadow 0.22s, transform 0.12s, color 0.18s;
+  margin: 1.2em 0;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+.add-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #fff6 0%, #00c6ae33 100%);
+  opacity: 0;
+  transition: opacity 0.22s;
+  pointer-events: none;
+}
+.add-card:hover,
+.add-card:focus {
+  background: linear-gradient(90deg, #232b4d 0%, #00c6ae 100%);
+  box-shadow: 0 10px 32px #00c6ae44, 0 2px 8px #232b4d22;
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
+}
+.add-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px #00c6ae22;
+}
+.add-card:focus-visible {
+  outline: 2.5px solid #00c6ae;
+  outline-offset: 2px;
+}
+@media (max-width: 768px) {
+  .quick-transfer-card.qt-modern {
+    padding: 18px 8px 18px 8px;
+    margin: 18px 0;
+  }
+  .qt-avatar,
+  .qt-add-avatar {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 1.1rem;
+  }
+  .qt-form {
+    gap: 10px;
+  }
+  .qt-input-wrapper input[type="text"] {
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 700px) {
+  .qt-clean-card {
+    padding: 16px 4px 16px 4px;
+    margin: 12px 0;
+  }
+  .qt-avatars-row {
+    gap: 6px;
+  }
+  .qt-avatar-img {
+    width: 30px;
+    height: 30px;
+    font-size: 0.92rem;
+  }
+  .qt-btn-row {
+    gap: 6px;
+  }
+  .qt-input {
+    font-size: 0.98rem;
+    padding: 10px 6px 10px 10px;
+  }
+  .qt-visa-badge {
+    font-size: 0.92rem;
+    padding: 5px 12px;
+  }
+}

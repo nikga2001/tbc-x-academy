@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - MyBank</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="nav-left">
+          <span class="logo">🏦 HaloBank</span>
+          <ul class="nav-links">
+            <li class="active">Overview</li>
+            <li>Cards</li>
+            <li>Transactions</li>
+            <li>Account</li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <span class="avatar">
+            <img src="images/nika.jpg" alt="User" />
+          </span>
+        </div>
+      </nav>
+      <!-- Main Content -->
+      <main class="dashboard-main">
+        <!-- Left Column -->
+        <section class="left-col">
+          <div class="my-cards">
+            <h2>My Cards</h2>
+            <div class="card-nav">
+              <button class="card-arrow left" aria-label="Previous card">
+                &#8592;
+              </button>
+              <button class="card-arrow right" aria-label="Next card">
+                &#8594;
+              </button>
+            </div>
+            <div class="card-stack">
+              <div class="bank-card back-card">
+                <div class="card-chip"></div>
+                <div class="card-details">
+                  <span class="card-bank">HaloBank</span>
+                  <span class="card-number">1214 2791 3283 9102</span>
+                  <span class="card-date">06/28</span>
+                </div>
+                <span class="card-type">VISA</span>
+              </div>
+              <div class="bank-card front-card">
+                <div class="card-chip"></div>
+                <div class="card-details">
+                  <span class="card-bank">HaloBank</span>
+                  <span class="card-number">1214 2791 3283 9102</span>
+                  <span class="card-date">06/28</span>
+                </div>
+                <span class="card-type">VISA</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="balance-label">Your Balance</div>
+              <div class="balance-amount">$420,912.00</div>
+              <div class="card-stats">
+                <span class="up">+23.85%</span>
+                <span class="down">-10.40%</span>
+              </div>
+              <div class="card-meta">
+                <span>Currency: <b>USD / US Dollar</b></span>
+                <span>Status: <span class="active">Active</span></span>
+              </div>
+            </div>
+            <button class="add-card">Add New Card</button>
+          </div>
+          <div class="quick-transfer quick-transfer-card qt-modern">
+            <h3>Quick Transfer</h3>
+            <div class="transfer-avatars">
+              <img
+                src="images/maria.webp"
+                alt="User Photo"
+                class="avatar-img qt-avatar"
+              />
+              <img
+                src="images/gvanca.jpg"
+                alt="User Photo"
+                class="avatar-img qt-avatar"
+              />
+              <img
+                src="images/george.jpg"
+                alt="User Photo"
+                class="avatar-img qt-avatar"
+              />
+              <img
+                src="images/nicolas.avif"
+                alt="User Photo"
+                class="avatar-img qt-avatar"
+              />
+              <span class="avatar-img qt-avatar qt-add-avatar">+</span>
+            </div>
+            <hr class="qt-divider qt-gradient-divider" />
+            <form class="transfer-form qt-form">
+              <div class="qt-input-wrapper">
+                <span class="qt-input-icon">💳</span>
+                <input type="text" placeholder="Card Number" value="" />
+              </div>
+              <div class="qt-helper-text">Enter recipient's card number</div>
+              <button type="button" class="visa-btn qt-pill">VISA</button>
+              <button type="submit" class="send-btn qt-gradient-btn">
+                Send Money
+              </button>
+              <button type="button" class="draft-btn qt-outline-btn">
+                Save as Draft
+              </button>
+            </form>
+          </div>
+        </section>
+        <!-- Center Column -->
+        <section class="center-col">
+          <div class="summary-cards">
+            <div class="summary-card-1">
+              <div>Balance</div>
+              <b>$420,912</b>
+            </div>
+            <div class="summary-card-2">
+              <div>Income</div>
+              <b>$18,240</b>
+            </div>
+            <div class="summary-card-3">
+              <div>Savings</div>
+              <b>$473,011</b>
+            </div>
+            <div class="summary-card-4">
+              <div>Expense</div>
+              <b>$12,131</b>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

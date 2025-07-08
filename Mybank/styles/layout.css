@@ -1,0 +1,100 @@
+.dashboard-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-main {
+  display: flex;
+  gap: 2vw;
+  padding: 2vw;
+}
+
+.left-col {
+  flex: 0.1rem;
+  min-width: 260px;
+  border-right: 1px solid #eee;
+  padding-right: 0.2rem;
+  margin-right: 2em; /* დამატებული დაშორება ჩრდილისთვის */
+}
+
+.center-col {
+  flex: 2;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all children horizontally */
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: center; /* Center the cards in the row */
+  gap: 2rem; /* Space between cards, adjust as needed */
+  margin-bottom: 2rem; /* Space below the summary cards */
+}
+
+.summary-cards > div {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+  min-width: 140px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-card-1 {
+  border-top: 10px solid #3b82f6;
+}
+.summary-card-2 {
+  border-top: 10px solid #10b981;
+}
+.summary-card-3 {
+  border-top: 10px solid #f59e42;
+}
+.summary-card-4 {
+  border-top: 10px solid #ef4444;
+}
+
+@media (max-width: 1024px) {
+  .left-col {
+    min-width: 260px;
+    /* width: auto; */
+  }
+  .center-col {
+    min-width: 320px;
+    /* width: auto; */
+  }
+  .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 728px) {
+  .dashboard-main {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .left-col,
+  .center-col,
+  .right-col {
+    min-width: 0;
+    width: 100%;
+  }
+  .left-col {
+    margin-right: 10rem; /* მობილურზე აღარ იყოს დაშორება */
+  }
+  .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,161 @@
+.my-cards {
+  position: relative;
+}
+.card-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.card-arrow {
+  background: #fff;
+  border: 1px solid #e0e7ef;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  color: #232b4d;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #e9f2fa33;
+  transition: background 0.2s, color 0.2s;
+}
+.card-arrow:hover {
+  background: #00c6ae;
+  color: #fff;
+}
+.card-stack {
+  position: relative;
+  min-height: 140px;
+  margin-bottom: 1.2rem;
+  max-width: 320px;
+}
+.bank-card {
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: linear-gradient(135deg, #232b4d 60%, #3e4a6b 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 1.4rem 1.7rem 1.2rem 1.7rem;
+  min-width: 270px;
+  min-height: 150px;
+  box-shadow: 0 8px 32px #232b4d33;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.back-card {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  filter: blur(2px) brightness(0.92);
+  opacity: 0.7;
+  z-index: 1;
+  pointer-events: none;
+}
+.front-card {
+  position: relative;
+  z-index: 2;
+}
+.card-chip {
+  width: 38px;
+  height: 26px;
+  background: linear-gradient(120deg, #e0e7ef 60%, #bfc9d9 100%);
+  border-radius: 7px;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 1px 4px #232b4d22;
+}
+.card-details {
+  font-size: 1.05rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.04em;
+}
+.card-bank {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 0.2em;
+  display: block;
+}
+.card-number {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.15em;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.2em;
+  display: block;
+}
+.card-date {
+  font-size: 0.95em;
+  opacity: 0.8;
+}
+.card-type {
+  position: absolute;
+  bottom: 1.1rem;
+  right: 1.7rem;
+  font-weight: bold;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  opacity: 0.95;
+}
+.card-info {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #e9f2fa33;
+  padding: 1.1em 1.2em 0.7em 1.2em;
+  margin-bottom: 1rem;
+  color: #232b4d;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.balance-label {
+  font-size: 1.2em;
+  color: #324058;
+  margin-top: 2em;
+  margin-bottom: 0.1em;
+}
+.balance-amount {
+  font-size: 1.45em;
+  font-weight: bold;
+  color: #232b4d;
+  margin-bottom: 0.2em;
+}
+.card-stats {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1em;
+  margin: 0.2em 0 0.3em 0;
+}
+.card-stats .up {
+  color: #00c6ae;
+  font-weight: 600;
+}
+.card-stats .down {
+  color: #ff5a5f;
+  font-weight: 600;
+}
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.97em;
+  color: #7a869a;
+  margin-top: 0.2em;
+}
+.card-meta b {
+  color: #232b4d;
+  font-weight: 500;
+}
+.card-meta .active {
+  color: #00c6ae;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .card-stack {
+    max-width: 240px;
+    min-height: 120px;
+  }
+  .bank-card {
+    min-width: 200px;
+    min-height: 120px;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+  }
+}

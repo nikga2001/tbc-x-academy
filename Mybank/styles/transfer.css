@@ -1,0 +1,319 @@
+.quick-transfer-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 28px 24px 24px 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border: 1px solid #f0f0f0;
+}
+.quick-transfer-card h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.transfer-avatars {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+  justify-content: flex-start;
+}
+.avatar-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.qt-divider {
+  border: none;
+  border-top: 1.5px solid #ececec;
+  margin: 18px 0 18px 0;
+}
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.transfer-form input[type="text"] {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  font-size: 1rem;
+}
+.transfer-form button {
+  padding: 9px 0;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.visa-btn {
+  background: #f5f5f5;
+  color: #1a1a1a;
+}
+.send-btn {
+  background: #4f8cff;
+  color: #fff;
+  font-weight: 600;
+}
+.draft-btn {
+  background: #f0f0f0;
+  color: #888;
+}
+/* .qt-* classes */
+.qt-modern {
+  background: linear-gradient(135deg, #f8fafd 0%, #e3e9ff 100%);
+  box-shadow: 0 8px 32px rgba(79, 140, 255, 0.1);
+  border: none;
+  transition: box-shadow 0.2s;
+}
+.qt-modern:hover {
+  box-shadow: 0 12px 36px rgba(79, 140, 255, 0.18);
+}
+.qt-avatar {
+  transition: transform 0.18s, box-shadow 0.18s, border 0.18s;
+  cursor: pointer;
+}
+.qt-avatar:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.18);
+  border: 2.5px solid #4f8cff;
+}
+.qt-add-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e3e9ff;
+  color: #4f8cff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px dashed #b3c6ff;
+  min-width: 44px;
+  min-height: 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background 0.18s, border 0.18s;
+}
+.qt-add-avatar:hover {
+  background: #d0dbff;
+  border: 2.5px solid #4f8cff;
+}
+.qt-gradient-divider {
+  border: none;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #b3c6ff 0 10px,
+    #e3e9ff 10px 20px
+  );
+  margin: 18px 0 18px 0;
+}
+.qt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.qt-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.qt-input-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 1.1rem;
+  color: #4f8cff;
+  pointer-events: none;
+}
+.qt-input-wrapper input[type="text"] {
+  padding: 10px 12px 10px 36px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  font-size: 1rem;
+  width: 100%;
+}
+.qt-helper-text {
+  font-size: 0.92rem;
+  color: #7a8bb7;
+  margin-top: -10px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+.qt-pill {
+  background: #f5f5f5;
+  color: #1a1a1a;
+  border-radius: 999px;
+  padding: 7px 22px;
+  font-weight: 600;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 0;
+  display: inline-block;
+  width: fit-content;
+}
+.qt-gradient-btn {
+  background: linear-gradient(90deg, #4f8cff 0%, #6f9fff 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.1);
+  padding: 10px 0;
+  font-size: 1rem;
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.qt-gradient-btn:hover {
+  background: linear-gradient(90deg, #3a7be0 0%, #4f8cff 100%);
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.18);
+}
+.qt-outline-btn {
+  background: #fff;
+  color: #4f8cff;
+  border: 1.5px solid #4f8cff;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.18s, color 0.18s;
+}
+.qt-outline-btn:hover {
+  background: #e3e9ff;
+  color: #2a4a8c;
+}
+.qt-clean-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  padding: 28px 24px 24px 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border: none;
+  min-width: 0;
+}
+.qt-title {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 0 0 18px 0;
+  color: #232b4d;
+}
+.qt-avatars-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.qt-avatar-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f3f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4f8cff;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(79, 140, 255, 0.06);
+}
+.qt-avatar-initials {
+  background: #e3e9ff;
+  color: #4f8cff;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+}
+.qt-avatar-add {
+  background: #f3f6fa;
+  color: #b3c6ff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 2px dashed #e3e9ff;
+  cursor: pointer;
+  transition: border 0.18s, color 0.18s;
+}
+.qt-avatar-add:hover {
+  border: 2px solid #4f8cff;
+  color: #4f8cff;
+}
+.qt-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.qt-input-group {
+  display: flex;
+  align-items: center;
+  background: #f3f6fa;
+  border-radius: 10px;
+  padding: 0 8px 0 0;
+  border: 1.5px solid #f3f6fa;
+  transition: border 0.18s;
+}
+.qt-input-group:focus-within {
+  border: 1.5px solid #4f8cff;
+}
+.qt-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 8px 12px 16px;
+  font-size: 1rem;
+  border-radius: 10px;
+  outline: none;
+  color: #232b4d;
+}
+.qt-visa-badge {
+  background: #e3e9ff;
+  color: #4f8cff;
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 8px;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+.qt-btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 2px;
+}
+.qt-btn {
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 0;
+  min-width: 0;
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+}
+.qt-btn-primary {
+  background: #4f8cff;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.1);
+  border: none;
+}
+.qt-btn-primary:hover {
+  background: #3a7be0;
+}
+.qt-btn-outline {
+  background: #fff;
+  color: #4f8cff;
+  border: 1.5px solid #e3e9ff;
+}
+.qt-btn-outline:hover {
+  background: #e3e9ff;
+  color: #2a4a8c;
+}
