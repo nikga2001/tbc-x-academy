@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards - MyBank</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/cards-page.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <span class="logo">Bank Name</span>
+
+        <ul class="nav-links">
+          <li>
+            <a
+              href="dashboard.html"
+              style="text-decoration: none; color: inherit"
+              >Overview</a
+            >
+          </li>
+          <li class="active">
+            <a href="cards.html" style="text-decoration: none; color: inherit"
+              >Cards</a
+            >
+          </li>
+          <li>
+            <a
+              href="transactions.html"
+              style="text-decoration: none; color: inherit"
+              >Transactions</a
+            >
+          </li>
+          <li>Account</li>
+        </ul>
+
+        <div class="nav-right">
+          <button class="theme-toggle">🌙</button>
+          <div class="avatar">
+            <img src="images/nika.jpg" alt="Profile" />
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="cards-main">
+        <div class="cards-header">
+          <h1>My Cards</h1>
+          <p>Manage and view all your bank cards</p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card 1 - Main Card -->
+          <div class="card-item">
+            <div class="bank-card main-card">
+              <div class="card-chip"></div>
+              <div class="card-details">
+                <span class="card-bank">HaloBank</span>
+                <span class="card-number">1214 2791 3283 9102</span>
+                <span class="card-date">06/28</span>
+              </div>
+              <span class="card-type">VISA</span>
+            </div>
+            <div class="card-info">
+              <div class="balance-label">Your Balance</div>
+              <div class="balance-amount">$420,912.00</div>
+              <div class="card-stats">
+                <span class="up">+23.85%</span>
+                <span class="down">-10.40%</span>
+              </div>
+              <div class="card-meta">
+                <span>Currency: <b>USD / US Dollar</b></span>
+                <span>Status: <span class="active">Active</span></span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn primary">Use Card</button>
+              <button class="card-btn secondary">Details</button>
+            </div>
+          </div>
+
+          <!-- Card 2 - Credit Card -->
+          <div class="card-item">
+            <div class="bank-card credit-card">
+              <div class="card-chip"></div>
+              <div class="card-details">
+                <span class="card-bank">HaloBank</span>
+                <span class="card-number">4587 1234 5678 9012</span>
+                <span class="card-date">12/25</span>
+              </div>
+              <span class="card-type">MASTERCARD</span>
+            </div>
+            <div class="card-info">
+              <div class="balance-label">Credit Limit</div>
+              <div class="balance-amount">$15,000.00</div>
+              <div class="card-stats">
+                <span class="up">Available: $8,450</span>
+                <span class="down">Used: $6,550</span>
+              </div>
+              <div class="card-meta">
+                <span>Type: <b>Credit Card</b></span>
+                <span>Status: <span class="active">Active</span></span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn primary">Use Card</button>
+              <button class="card-btn secondary">Details</button>
+            </div>
+          </div>
+
+          <!-- Card 3 - Savings Card -->
+          <div class="card-item">
+            <div class="bank-card savings-card">
+              <div class="card-chip"></div>
+              <div class="card-details">
+                <span class="card-bank">HaloBank</span>
+                <span class="card-number">9876 5432 1098 7654</span>
+                <span class="card-date">09/26</span>
+              </div>
+              <span class="card-type">VISA</span>
+            </div>
+            <div class="card-info">
+              <div class="balance-label">Savings Balance</div>
+              <div class="balance-amount">$473,011.00</div>
+              <div class="card-stats">
+                <span class="up">+12.5%</span>
+                <span class="down">This Month</span>
+              </div>
+              <div class="card-meta">
+                <span>Type: <b>Savings Account</b></span>
+                <span>Status: <span class="active">Active</span></span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn primary">Transfer</button>
+              <button class="card-btn secondary">Details</button>
+            </div>
+          </div>
+
+          <!-- Card 4 - Business Card -->
+          <div class="card-item">
+            <div class="bank-card business-card">
+              <div class="card-chip"></div>
+              <div class="card-details">
+                <span class="card-bank">HaloBank</span>
+                <span class="card-number">3456 7890 1234 5678</span>
+                <span class="card-date">03/27</span>
+              </div>
+              <span class="card-type">VISA</span>
+            </div>
+            <div class="card-info">
+              <div class="balance-label">Business Balance</div>
+              <div class="balance-amount">$89,234.00</div>
+              <div class="card-stats">
+                <span class="up">+8.2%</span>
+                <span class="down">This Week</span>
+              </div>
+              <div class="card-meta">
+                <span>Type: <b>Business Account</b></span>
+                <span>Status: <span class="active">Active</span></span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn primary">Use Card</button>
+              <button class="card-btn secondary">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-card-section">
+          <button class="add-new-card">
+            <span class="add-icon">+</span>
+            <span>Add New Card</span>
+          </button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transactions - MyBank</title>
+    <link rel="stylesheet" href="styles/transactions-page.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+      <div class="logo">MyBank</div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="dashboard.html" style="text-decoration: none; color: inherit"
+            >Overview</a
+          >
+        </li>
+        <li>
+          <a href="cards.html" style="text-decoration: none; color: inherit"
+            >Cards</a
+          >
+        </li>
+        <li class="active">Transactions</li>
+        <li>Account</li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle">🌙</button>
+        <div class="avatar">
+          <img src="images/nika.jpg" alt="Profile" />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="transactions-container">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Transactions</h1>
+        <p class="page-subtitle">
+          View and manage all your financial transactions
+        </p>
+      </div>
+
+      <!-- Filters Section -->
+      <div class="filters-section">
+        <div class="filter-group">
+          <label class="filter-label">Transaction Type</label>
+          <select class="filter-select">
+            <option value="">All Transactions</option>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+            <option value="transfer">Transfer</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Category</label>
+          <select class="filter-select">
+            <option value="">All Categories</option>
+            <option value="shopping">Shopping</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="food">Food & Dining</option>
+            <option value="transport">Transport</option>
+            <option value="utilities">Utilities</option>
+            <option value="salary">Salary</option>
+            <option value="investment">Investment</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Date Range</label>
+          <select class="filter-select">
+            <option value="">All Time</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+            <option value="quarter">This Quarter</option>
+            <option value="year">This Year</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Search</label>
+          <input
+            type="text"
+            class="filter-input"
+            placeholder="Search transactions..."
+          />
+        </div>
+
+        <button class="search-btn">Search</button>
+      </div>
+
+      <!-- Transactions Section -->
+      <div class="transactions-section">
+        <div class="section-header">
+          <h2 class="section-title">Recent Transactions</h2>
+          <span class="transaction-count">Showing 15 of 127 transactions</span>
+        </div>
+
+        <!-- Transaction Items -->
+        <div class="transaction-item">
+          <div
+            class="transaction-icon"
+            style="
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            "
+          >
+            🎨
+          </div>
+          <div class="transaction-details">
+            <div class="transaction-title">Figma Subscription</div>
+            <div class="transaction-category">Software & Tools</div>
+            <div class="transaction-date">Dec 19, 2021 at 09:33</div>
+          </div>
+          <div class="transaction-amount negative">-$45.00</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div
+            class="transaction-icon"
+            style="
+              background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            "
+          >
+            📺
+          </div>
+          <div class="transaction-details">
+            <div class="transaction-title">Netflix</div>
+            <div class="transaction-category">Entertainment</div>
+            <div class="transaction-date">Dec 19, 2021 at 09:31</div>
+          </div>
+          <div class="transaction-amount negative">-$13.00</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div
+            class="transaction-icon"
+            style="
+              background: linear-gradient(135deg, #1db954 0%, #1ed760 100%);
+            "
+          >
+            🎵
+          </div>
+          <div class="transaction-details">
+            <div class="transaction-title">Spotify Premium</div>
+            <div class="transaction-category">Entertainment</div>
+            <div class="transaction-date">Dec 21, 2021 at 10:20</div>
+          </div>
+          <div class="transaction-amount negative">-$9.99</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #eaf3fb">💻</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Framer Pro</div>
+            <div class="transaction-category">Software & Tools</div>
+            <div class="transaction-date">Dec 19, 2021 at 09:30</div>
+          </div>
+          <div class="transaction-amount negative">-$20.00</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #fff3e0">🍕</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Pizza Delivery</div>
+            <div class="transaction-category">Food & Dining</div>
+            <div class="transaction-date">Dec 18, 2021 at 19:45</div>
+          </div>
+          <div class="transaction-amount negative">-$28.50</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div
+            class="transaction-icon"
+            style="
+              background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            "
+          >
+            💰
+          </div>
+          <div class="transaction-details">
+            <div class="transaction-title">Salary Deposit</div>
+            <div class="transaction-category">Income</div>
+            <div class="transaction-date">Dec 15, 2021 at 08:00</div>
+          </div>
+          <div class="transaction-amount positive">+$5,200.00</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #f0f8ff">🚗</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Uber Ride</div>
+            <div class="transaction-category">Transport</div>
+            <div class="transaction-date">Dec 17, 2021 at 22:15</div>
+          </div>
+          <div class="transaction-amount negative">-$15.75</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #fff0f0">🛒</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Amazon Purchase</div>
+            <div class="transaction-category">Shopping</div>
+            <div class="transaction-date">Dec 16, 2021 at 14:30</div>
+          </div>
+          <div class="transaction-amount negative">-$89.99</div>
+          <div class="transaction-status status-pending">Pending</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #f0fff0">📈</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Investment Dividend</div>
+            <div class="transaction-category">Investment</div>
+            <div class="transaction-date">Dec 14, 2021 at 12:00</div>
+          </div>
+          <div class="transaction-amount positive">+$245.00</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #fff8dc">⚡</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Electricity Bill</div>
+            <div class="transaction-category">Utilities</div>
+            <div class="transaction-date">Dec 13, 2021 at 10:00</div>
+          </div>
+          <div class="transaction-amount negative">-$67.50</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #f5f5dc">🏦</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Bank Transfer</div>
+            <div class="transaction-category">Transfer</div>
+            <div class="transaction-date">Dec 12, 2021 at 16:45</div>
+          </div>
+          <div class="transaction-amount negative">-$500.00</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #ffe4e1">🎬</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Movie Tickets</div>
+            <div class="transaction-category">Entertainment</div>
+            <div class="transaction-date">Dec 11, 2021 at 20:30</div>
+          </div>
+          <div class="transaction-amount negative">-$32.00</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #e6e6fa">💳</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Credit Card Payment</div>
+            <div class="transaction-category">Payment</div>
+            <div class="transaction-date">Dec 10, 2021 at 09:15</div>
+          </div>
+          <div class="transaction-amount negative">-$1,250.00</div>
+          <div class="transaction-status status-failed">Failed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #f0f8ff">☕</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Starbucks Coffee</div>
+            <div class="transaction-category">Food & Dining</div>
+            <div class="transaction-date">Dec 09, 2021 at 08:30</div>
+          </div>
+          <div class="transaction-amount negative">-$4.75</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <div class="transaction-item">
+          <div class="transaction-icon" style="background: #e8f5e8">🎁</div>
+          <div class="transaction-details">
+            <div class="transaction-title">Gift Card Purchase</div>
+            <div class="transaction-category">Shopping</div>
+            <div class="transaction-date">Dec 08, 2021 at 15:20</div>
+          </div>
+          <div class="transaction-amount negative">-$100.00</div>
+          <div class="transaction-status status-completed">Completed</div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="pagination-btn" disabled>Previous</button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <button class="pagination-btn">4</button>
+          <button class="pagination-btn">5</button>
+          <button class="pagination-btn">Next</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

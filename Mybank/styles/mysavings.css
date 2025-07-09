@@ -25,7 +25,7 @@
   transition: color 0.18s;
 }
 .my-savings .view-more:hover {
-  color: #232b4d;
+  color: #1d61a0;
   text-decoration: underline;
 }
 .savings-list {
