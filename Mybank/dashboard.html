@@ -6,6 +6,7 @@
     <title>Dashboard - MyBank</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/moneyflow.css" />
+    <link rel="stylesheet" href="styles/mysavings.css" />
   </head>
   <body>
     <div class="dashboard-container">
@@ -177,9 +178,190 @@
               </div>
             </div>
             <!-- Placeholder for other grid items (e.g., My Savings, Transactions, All Expenses) -->
-            <div class="my-savings">My Savings (Coming soon)</div>
-            <div class="transactions">Transactions (Coming soon)</div>
-            <div class="all-expenses">All Expenses (Coming soon)</div>
+            <div class="my-savings">
+              <div class="section-header">
+                <span>My Savings</span>
+                <span class="view-more">View More ></span>
+              </div>
+              <ul class="savings-list">
+                <li>
+                  <div class="goal-label">
+                    <span class="icon" style="color: #3b82f6">💻</span> Gaming
+                    PC
+                  </div>
+                  <span class="amount">$1,450.00</span>
+                  <div class="savings-progress">
+                    <div
+                      class="savings-progress-bar savings-bar-blue"
+                      style="width: 40%"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="goal-label">
+                    <span class="icon" style="color: #10b981">🏠</span> New
+                    House
+                  </div>
+                  <span class="amount">$312,412.00</span>
+                  <div class="savings-progress">
+                    <div
+                      class="savings-progress-bar savings-bar-green"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="goal-label">
+                    <span class="icon" style="color: #f59e42">✈️</span> Summer
+                    Trip
+                  </div>
+                  <span class="amount">$500.00</span>
+                  <div class="savings-progress">
+                    <div
+                      class="savings-progress-bar savings-bar-yellow"
+                      style="width: 20%"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="goal-label">
+                    <span class="icon" style="color: #ef4444">💍</span> Wedding
+                  </div>
+                  <span class="amount">$18,142.00</span>
+                  <div class="savings-progress">
+                    <div
+                      class="savings-progress-bar savings-bar-red"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="transactions-history">
+              <div class="transactions-header">
+                <span>Transactions</span>
+                <a href="#" class="view-more">View More &gt;</a>
+              </div>
+              <ul class="transactions-list">
+                <li>
+                  <span class="transaction-icon" style="background: #f5f6fa"
+                    ><span style="font-size: 20px">🎨</span></span
+                  >
+                  <span class="transaction-title">Figma</span>
+                  <span class="transaction-date">Dec 19, 2021 at 09:33</span>
+                  <span class="transaction-amount negative">-$45.00</span>
+                </li>
+                <li>
+                  <span class="transaction-icon" style="background: #fbeff2"
+                    ><span style="font-size: 20px">📺</span></span
+                  >
+                  <span class="transaction-title">Netflix</span>
+                  <span class="transaction-date">Dec 19, 2021 at 09:31</span>
+                  <span class="transaction-amount negative">-$13.00</span>
+                </li>
+                <li>
+                  <span class="transaction-icon" style="background: #eafaf1"
+                    ><span style="font-size: 20px">🎵</span></span
+                  >
+                  <span class="transaction-title">Spotify</span>
+                  <span class="transaction-date">Dec 21, 2021 at 10:20</span>
+                  <span class="transaction-amount negative">-$9.99</span>
+                </li>
+                <li>
+                  <span class="transaction-icon" style="background: #eaf3fb"
+                    ><span style="font-size: 20px">💻</span></span
+                  >
+                  <span class="transaction-title">Framer</span>
+                  <span class="transaction-date">Dec 19, 2021 at 09:30</span>
+                  <span class="transaction-amount negative">-$20.00</span>
+                </li>
+              </ul>
+            </div>
+            <section class="all-expenses-section">
+              <div class="all-expenses-header">
+                <span>All Expenses</span>
+                <select class="expenses-period">
+                  <option>Monthly</option>
+                  <option>Weekly</option>
+                  <option>Daily</option>
+                </select>
+              </div>
+              <div class="all-expenses-content">
+                <div class="expenses-stats">
+                  <div class="expense-stat">
+                    <div class="stat-label">Daily</div>
+                    <div class="stat-value">$475.00</div>
+                  </div>
+                  <div class="expense-stat">
+                    <div class="stat-label">Weekly</div>
+                    <div class="stat-value">$3,327.00</div>
+                  </div>
+                  <div class="expense-stat">
+                    <div class="stat-label">Monthly</div>
+                    <div class="stat-value">$12,131.00</div>
+                  </div>
+                </div>
+                <div class="expenses-chart">
+                  <div class="expenses-pie-chart"></div>
+                  <div class="chart-center-label">
+                    <div class="main-label">Shopping</div>
+                    <div class="main-value">$600</div>
+                  </div>
+                </div>
+                <div class="expenses-pie-legend">
+                  <div class="legend-item">
+                    <div class="legend-color blue"></div>
+                    <span>Shopping</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color green"></div>
+                    <span>Workspace</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color orange"></div>
+                    <span>Food</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color red"></div>
+                    <span>Transport</span>
+                  </div>
+                </div>
+                <ul class="expenses-categories">
+                  <li>
+                    <span
+                      class="category-dot"
+                      style="background: #3b82f6"
+                    ></span>
+                    Shopping
+                    <span class="category-value">$600</span>
+                  </li>
+                  <li>
+                    <span
+                      class="category-dot"
+                      style="background: #10b981"
+                    ></span>
+                    Workspace
+                    <span class="category-value">$200</span>
+                  </li>
+                  <li>
+                    <span
+                      class="category-dot"
+                      style="background: #f59e42"
+                    ></span>
+                    Platform
+                    <span class="category-value">$150</span>
+                  </li>
+                  <li>
+                    <span
+                      class="category-dot"
+                      style="background: #ef4444"
+                    ></span>
+                    Entertainments
+                    <span class="category-value">$100</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </div>
         </section>
         <section></section>

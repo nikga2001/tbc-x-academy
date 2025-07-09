@@ -1,0 +1,101 @@
+.my-savings {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  min-height: 220px;
+  position: relative;
+}
+.my-savings .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.my-savings .view-more {
+  color: #00c6ae;
+  font-size: 0.98rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.18s;
+}
+.my-savings .view-more:hover {
+  color: #232b4d;
+  text-decoration: underline;
+}
+.savings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+.savings-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  background: #f8fafd;
+  border-radius: 12px;
+  padding: 1em 1em 0.7em 1em;
+  box-shadow: 0 1px 4px #e9f2fa22;
+  position: relative;
+}
+.savings-list .icon {
+  font-size: 1.3em;
+  margin-right: 0.6em;
+  vertical-align: middle;
+}
+.savings-list .amount {
+  font-weight: 700;
+  color: #232b4d;
+  font-size: 1.08em;
+  margin-left: auto;
+}
+.savings-list .goal-label {
+  display: flex;
+  align-items: center;
+  font-size: 1.04em;
+  font-weight: 500;
+}
+.savings-progress {
+  width: 100%;
+  height: 8px;
+  background: #e0e7ef;
+  border-radius: 6px;
+  margin-top: 0.5em;
+  overflow: hidden;
+}
+.savings-progress-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.7s cubic-bezier(0.4, 2, 0.6, 1);
+}
+.savings-bar-blue {
+  background: linear-gradient(90deg, #3b82f6 60%, #60a5fa 100%);
+}
+.savings-bar-green {
+  background: linear-gradient(90deg, #10b981 60%, #34d399 100%);
+}
+.savings-bar-yellow {
+  background: linear-gradient(90deg, #f59e42 60%, #fbbf24 100%);
+}
+.savings-bar-red {
+  background: linear-gradient(90deg, #ef4444 60%, #f87171 100%);
+}
+
+@media (max-width: 768px) {
+  .my-savings {
+    min-width: 0;
+    min-height: 160px;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .savings-list li {
+    padding: 0.7em 0.7em 0.5em 0.7em;
+  }
+}
