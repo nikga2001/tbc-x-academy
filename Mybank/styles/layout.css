@@ -50,6 +50,33 @@
   align-items: center;
 }
 
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.money-flow-box,
+.my-savings-box,
+.transactions-box,
+.expenses-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  min-width: 320px;
+  min-height: 320px;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
 .summary-card-1 {
   border-top: 10px solid #3b82f6;
 }

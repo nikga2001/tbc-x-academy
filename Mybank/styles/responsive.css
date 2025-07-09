@@ -1,12 +1,12 @@
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    gap: 1em;
-    padding: 1em 2vw;
+    gap: 0.8em;
+    padding: 0.8em 2vw;
   }
   .dashboard-main {
-    padding: 1vw;
-    gap: 1vw;
+    padding: 0.8vw;
+    gap: 0.8vw;
   }
   .my-cards,
   .quick-transfer,
@@ -14,7 +14,7 @@
   .my-savings,
   .transactions,
   .all-expenses {
-    padding: 1em;
+    padding: 0.8em;
   }
   .my-cards {
     display: flex !important;
@@ -27,18 +27,18 @@
   background: linear-gradient(90deg, #00c6ae 0%, #232b4d 100%);
   color: #fff;
   border: none;
-  border-radius: 16px;
-  padding: 0.85em 2.4em;
-  font-size: 1.18em;
+  border-radius: 12px;
+  padding: 0.6em 1.8em;
+  font-size: 1em;
   font-weight: 700;
-  box-shadow: 0 6px 24px #00c6ae33, 0 1.5px 4px #232b4d22;
+  box-shadow: 0 1px 8px #00c6ae22, 0 1px 2px #232b4d12;
   cursor: pointer;
-  transition: background 0.22s, box-shadow 0.22s, transform 0.12s, color 0.18s;
-  margin: 1.2em 0;
-  letter-spacing: 0.04em;
+  transition: background 0.15s, box-shadow 0.15s, transform 0.08s, color 0.12s;
+  margin: 0.8em 0;
+  letter-spacing: 0.03em;
   display: inline-flex;
   align-items: center;
-  gap: 0.7em;
+  gap: 0.5em;
   outline: none;
   position: relative;
   overflow: hidden;
@@ -50,76 +50,76 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, #fff6 0%, #00c6ae33 100%);
+  background: linear-gradient(120deg, #fff2 0%, #00c6ae15 100%);
   opacity: 0;
-  transition: opacity 0.22s;
+  transition: opacity 0.15s;
   pointer-events: none;
 }
 .add-card:hover,
 .add-card:focus {
   background: linear-gradient(90deg, #232b4d 0%, #00c6ae 100%);
-  box-shadow: 0 10px 32px #00c6ae44, 0 2px 8px #232b4d22;
-  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 1px 10px #00c6ae25, 0 1px 2px #232b4d12;
+  transform: translateY(-0.5px) scale(1.01);
   color: #fff;
 }
 .add-card:active {
   transform: scale(0.98);
-  box-shadow: 0 2px 8px #00c6ae22;
+  box-shadow: 0 1px 2px #00c6ae15;
 }
 .add-card:focus-visible {
-  outline: 2.5px solid #00c6ae;
-  outline-offset: 2px;
+  outline: 1.5px solid #00c6ae;
+  outline-offset: 0.15px;
 }
 @media (max-width: 768px) {
   .quick-transfer-card.qt-modern {
-    padding: 18px 8px 18px 8px;
-    margin: 18px 0;
+    padding: 15px 6px 15px 6px;
+    margin: 15px 0;
   }
   .qt-avatar,
   .qt-add-avatar {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
-    font-size: 1.1rem;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 1rem;
   }
   .qt-form {
-    gap: 10px;
+    gap: 8px;
   }
   .qt-input-wrapper input[type="text"] {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
   }
 }
 @media (max-width: 768px) {
   .qt-clean-card {
-    padding: 16px 4px 16px 4px;
-    margin: 12px 0;
+    padding: 14px 3px 14px 3px;
+    margin: 10px 0;
   }
   .qt-avatars-row {
-    gap: 6px;
+    gap: 5px;
   }
   .qt-avatar-img {
-    width: 30px;
-    height: 30px;
-    font-size: 0.92rem;
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
   }
   .qt-btn-row {
-    gap: 6px;
+    gap: 5px;
   }
   .qt-input {
-    font-size: 0.98rem;
-    padding: 10px 6px 10px 10px;
+    font-size: 0.95rem;
+    padding: 8px 5px 8px 8px;
   }
   .qt-visa-badge {
-    font-size: 0.92rem;
-    padding: 5px 12px;
+    font-size: 0.9rem;
+    padding: 4px 10px;
   }
 }
 @media (max-width: 768px) {
   .dashboard-main {
     flex-direction: column !important;
-    gap: 1em !important;
-    padding: 2vw 1vw !important;
+    gap: 0.8em !important;
+    padding: 1.5vw 0.8vw !important;
   }
   .left-col,
   .center-col {
@@ -136,16 +136,16 @@
   .summary-cards {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 1em !important;
-    margin-top: 1.5em !important;
-    margin-bottom: 1.5em !important;
+    gap: 0.8em !important;
+    margin-top: 1.2em !important;
+    margin-bottom: 1.2em !important;
     width: 100% !important;
   }
   .summary-cards > div {
     min-width: 0 !important;
     width: 100% !important;
-    padding: 0.8em 0.4em !important;
-    min-height: 60px !important;
+    padding: 0.7em 0.3em !important;
+    min-height: 55px !important;
   }
   .my-cards {
     display: flex !important;
@@ -156,41 +156,41 @@
 }
 @media (max-width: 500px) {
   .quick-transfer-card.qt-modern {
-    padding: 10px 2vw 18px 2vw;
-    margin: 10px 0;
-    border-radius: 16px;
+    padding: 8px 2vw 15px 2vw;
+    margin: 8px 0;
+    border-radius: 14px;
   }
   .qt-avatars-row {
-    gap: 3px;
+    gap: 2px;
   }
   .qt-avatar-img,
   .qt-avatar-add {
-    width: 26px;
-    height: 26px;
-    font-size: 0.82rem;
-    min-width: 26px;
-    min-height: 26px;
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+    min-width: 24px;
+    min-height: 24px;
   }
   .qt-form {
-    gap: 6px;
-    padding: 8px 2px;
-    border-radius: 10px;
-  }
-  .qt-input {
-    font-size: 0.92rem;
-    padding: 8px 4px 8px 8px;
+    gap: 5px;
+    padding: 6px 2px;
     border-radius: 8px;
   }
+  .qt-input {
+    font-size: 0.9rem;
+    padding: 6px 3px 6px 6px;
+    border-radius: 6px;
+  }
   .qt-btn-row {
-    gap: 4px;
+    gap: 3px;
   }
   .qt-btn {
-    font-size: 0.98rem;
-    padding: 8px 0;
+    font-size: 0.95rem;
+    padding: 6px 0;
     border-radius: 999px;
   }
   .qt-visa-badge {
-    font-size: 0.82rem;
-    padding: 3px 8px;
+    font-size: 0.8rem;
+    padding: 2px 6px;
   }
 }

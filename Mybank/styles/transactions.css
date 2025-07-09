@@ -3,10 +3,10 @@
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 rgba(34, 34, 87, 0.06);
-  padding: 24px 28px;
+  padding: 18px 20px;
   margin-top: 0;
-  min-width: 280px;
-  min-height: 320px;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

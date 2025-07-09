@@ -2,11 +2,11 @@
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
   display: flex;
   flex-direction: column;
-  min-width: 240px;
-  min-height: 220px;
+  width: fit-content;
+  height: fit-content;
   position: relative;
 }
 .my-savings .section-header {
@@ -91,8 +91,8 @@
 
 @media (max-width: 768px) {
   .my-savings {
-    min-width: 0;
-    min-height: 160px;
+    width: fit-content;
+    height: fit-content;
     padding: 1.2rem 0.7rem 1rem 0.7rem;
   }
   .savings-list li {

@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/moneyflow.css" />
     <link rel="stylesheet" href="styles/mysavings.css" />
+    <style>
+      /* Desktop-specific styles for money-flow (highest priority) */
+      @media (min-width: 1025px) {
+        .money-flow {
+          width: fit-content !important;
+          height: fit-content !important;
+          padding: 0.7rem 0.7rem 0.4rem 0.7rem !important;
+        }
+        .moneyflow-header {
+          margin-bottom: 0.8rem !important;
+        }
+        .moneyflow-title {
+          font-size: 0.9rem !important;
+        }
+        .moneyflow-controls select {
+          padding: 0.2rem 0.5rem !important;
+          font-size: 0.9rem !important;
+        }
+        .moneyflow-value {
+          font-size: 0.8rem !important;
+          padding: 0.3rem 0.7rem !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="dashboard-container">
@@ -154,7 +178,48 @@
             </div>
           </div>
           <div class="main-grid">
-            <div class="money-flow">
+            <div class="transactions-history transactions-box">
+              <div class="transactions-header">
+                <span>Transactions</span>
+                <a href="#" class="view-more">View More &gt;</a>
+              </div>
+              <ul class="transactions-list">
+                <li>
+                  <span class="transaction-icon" style="background: #f5f6fa"
+                    ><span style="font-size: 20px">🎨</span></span
+                  >
+                  <span class="transaction-title">Figma</span>
+                  <span class="transaction-date">Dec 19, 2021 at 09:33</span>
+                  <span class="transaction-amount negative">-$45.00</span>
+                </li>
+                <li>
+                  <span class="transaction-icon" style="background: #fbeff2"
+                    ><span style="font-size: 20px">📺</span></span
+                  >
+                  <span class="transaction-title">Netflix</span>
+                  <span class="transaction-date">Dec 19, 2021 at 09:31</span>
+                  <span class="transaction-amount negative">-$13.00</span>
+                </li>
+                <li>
+                  <span class="transaction-icon" style="background: #eafaf1"
+                    ><span style="font-size: 20px">🎵</span></span
+                  >
+                  <span class="transaction-title">Spotify</span>
+                  <span class="transaction-date">Dec 21, 2021 at 10:20</span>
+                  <span class="transaction-amount negative">-$9.99</span>
+                </li>
+                <li>
+                  <span class="transaction-icon" style="background: #eaf3fb"
+                    ><span style="font-size: 20px">💻</span></span
+                  >
+                  <span class="transaction-title">Framer</span>
+                  <span class="transaction-date">Dec 19, 2021 at 09:30</span>
+                  <span class="transaction-amount negative">-$20.00</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="money-flow money-flow-box">
               <div class="moneyflow-header">
                 <span class="moneyflow-title">Money Flow</span>
                 <div class="moneyflow-controls">
@@ -172,13 +237,18 @@
                 <img
                   src="images/moneyflow.png"
                   alt="Money Flow Chart"
-                  style="width: 100%; max-width: 320px"
+                  style="
+                    width: 100%;
+                    max-width: 1000px;
+                    height: auto;
+                    margin-left: -15%;
+                  "
                 />
                 <div class="moneyflow-value">+$1,990</div>
               </div>
             </div>
             <!-- Placeholder for other grid items (e.g., My Savings, Transactions, All Expenses) -->
-            <div class="my-savings">
+            <div class="my-savings my-savings-box">
               <div class="section-header">
                 <span>My Savings</span>
                 <span class="view-more">View More ></span>
@@ -237,47 +307,8 @@
                 </li>
               </ul>
             </div>
-            <div class="transactions-history">
-              <div class="transactions-header">
-                <span>Transactions</span>
-                <a href="#" class="view-more">View More &gt;</a>
-              </div>
-              <ul class="transactions-list">
-                <li>
-                  <span class="transaction-icon" style="background: #f5f6fa"
-                    ><span style="font-size: 20px">🎨</span></span
-                  >
-                  <span class="transaction-title">Figma</span>
-                  <span class="transaction-date">Dec 19, 2021 at 09:33</span>
-                  <span class="transaction-amount negative">-$45.00</span>
-                </li>
-                <li>
-                  <span class="transaction-icon" style="background: #fbeff2"
-                    ><span style="font-size: 20px">📺</span></span
-                  >
-                  <span class="transaction-title">Netflix</span>
-                  <span class="transaction-date">Dec 19, 2021 at 09:31</span>
-                  <span class="transaction-amount negative">-$13.00</span>
-                </li>
-                <li>
-                  <span class="transaction-icon" style="background: #eafaf1"
-                    ><span style="font-size: 20px">🎵</span></span
-                  >
-                  <span class="transaction-title">Spotify</span>
-                  <span class="transaction-date">Dec 21, 2021 at 10:20</span>
-                  <span class="transaction-amount negative">-$9.99</span>
-                </li>
-                <li>
-                  <span class="transaction-icon" style="background: #eaf3fb"
-                    ><span style="font-size: 20px">💻</span></span
-                  >
-                  <span class="transaction-title">Framer</span>
-                  <span class="transaction-date">Dec 19, 2021 at 09:30</span>
-                  <span class="transaction-amount negative">-$20.00</span>
-                </li>
-              </ul>
-            </div>
-            <section class="all-expenses-section">
+
+            <section class="all-expenses-section expenses-box">
               <div class="all-expenses-header">
                 <span>All Expenses</span>
                 <select class="expenses-period">
