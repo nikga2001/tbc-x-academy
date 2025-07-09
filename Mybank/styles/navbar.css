@@ -3,8 +3,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2vw;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
   position: relative;
 }
 
@@ -24,7 +25,7 @@
 
 /* THEME TOGGLE */
 .theme-toggle {
-  background: #f5f5f5;
+  background: var(--card-bg);
   border: none;
   border-radius: 50%;
   width: 32px;
@@ -50,7 +51,7 @@
   top: 60px;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: var(--card-bg);
   flex-direction: column;
   display: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -58,13 +59,14 @@
 
 .nav-links li {
   padding: 1rem 2vw;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border);
   cursor: pointer;
+  color: var(--text);
 }
 
 .nav-links .active {
-  color: #00c6ae;
-  border-bottom: 2px solid #00c6ae;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
 }
 
 /* TOGGLE LOGIC */

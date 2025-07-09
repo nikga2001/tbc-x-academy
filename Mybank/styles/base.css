@@ -10,10 +10,61 @@ body {
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #fff;
+  --text: #222;
+  --card-bg: #fff;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  --primary: #00c6ae;
+  --secondary: #232b4d;
+  --border: #eee;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: var(--bg);
   font-family: "Segoe UI", Arial, sans-serif;
-  color: #222;
+  color: var(--text);
+}
+
+.dashboard-container,
+.money-flow,
+.my-savings,
+.transactions-history,
+.expenses-box,
+.card-info,
+.summary-cards > div {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  color: var(--text);
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+}
+.theme-switcher input[type="radio"] {
+  display: none;
+}
+.theme-switcher label {
+  cursor: pointer;
+  font-size: 1.3em;
+  padding: 0.1em 0.3em;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.theme-switcher input[type="radio"]:checked + label {
+  background: #e0e7ef;
+}
+
+body:has(#theme-dark:checked) {
+  --bg: #181c24;
+  --text: #f3f4f6;
+  --card-bg: #232b4d;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  --primary: #00c6ae;
+  --secondary: #00c6ae;
+  --border: #232b4d;
 }

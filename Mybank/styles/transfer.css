@@ -1,7 +1,7 @@
 .quick-transfer {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 18px;
-  box-shadow: 0 4px 24px #232b4d18, 0 1.5px 4px #00c6ae22;
+  box-shadow: var(--card-shadow);
   padding: 2em 2em 1.5em 2em;
   margin-top: 2em;
   display: flex;
@@ -10,6 +10,7 @@
   max-width: 370px;
   width: 100%;
   transition: box-shadow 0.2s;
+  color: var(--text);
 }
 .quick-transfer:hover {
   box-shadow: 0 8px 32px #00c6ae33, 0 2px 8px #232b4d22;
@@ -22,7 +23,7 @@
 .qt-title {
   font-size: 1.25em;
   font-weight: 700;
-  color: #232b4d;
+  color: var(--secondary, #232b4d);
   margin: 0;
 }
 .qt-avatars-row {
@@ -135,7 +136,11 @@
   transition: background 0.18s, color 0.18s, box-shadow 0.18s;
 }
 .qt-btn-primary {
-  background: linear-gradient(90deg, #00c6ae 0%, #232b4d 100%);
+  background: linear-gradient(
+    90deg,
+    var(--primary, #00c6ae) 0%,
+    var(--secondary, #232b4d) 100%
+  );
   color: #fff;
   box-shadow: 0 2px 8px #00c6ae22;
 }
@@ -143,9 +148,9 @@
   background: linear-gradient(90deg, #232b4d 0%, #00c6ae 100%);
 }
 .qt-btn-outline {
-  background: #fff;
-  color: #00c6ae;
-  border: 2px solid #00c6ae;
+  background: var(--card-bg);
+  color: var(--primary, #00c6ae);
+  border: 2px solid var(--primary, #00c6ae);
 }
 .qt-btn-outline:hover {
   background: #eafaf7;

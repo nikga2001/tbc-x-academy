@@ -1,7 +1,7 @@
 .dashboard-container {
   width: 100vw;
   min-height: 100vh;
-  background: #fff;
+  background: var(--bg);
   display: flex;
   flex-direction: column;
 }
@@ -37,9 +37,9 @@
 }
 
 .summary-cards > div {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--card-shadow);
   padding: 1.5rem 2.5rem;
   text-align: center;
   min-width: 140px;
@@ -48,6 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--text);
 }
 
 .main-grid {
@@ -65,9 +66,9 @@
 .my-savings-box,
 .transactions-box,
 .expenses-box {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--card-shadow);
   padding: 1.5rem;
   min-width: 320px;
   min-height: 320px;
@@ -75,6 +76,7 @@
   height: 100% !important;
   display: flex;
   flex-direction: column;
+  color: var(--text);
 }
 
 .summary-card-1 {

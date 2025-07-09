@@ -31,13 +31,17 @@
 }
 .bank-card {
   transition: box-shadow 0.2s, transform 0.2s;
-  background: linear-gradient(135deg, #232b4d 60%, #3e4a6b 100%);
+  background: linear-gradient(
+    135deg,
+    var(--secondary, #232b4d) 60%,
+    #3e4a6b 100%
+  );
   color: #fff;
   border-radius: 18px;
   padding: 1.4rem 1.7rem 1.2rem 1.7rem;
   min-width: 270px;
   min-height: 150px;
-  box-shadow: 0 8px 32px #232b4d33;
+  box-shadow: 0 8px 32px var(--secondary, #232b4d33);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -96,26 +100,26 @@
   opacity: 0.95;
 }
 .card-info {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 14px;
-  box-shadow: 0 2px 8px #e9f2fa33;
+  box-shadow: var(--card-shadow);
   padding: 1.1em 1.2em 0.7em 1.2em;
   margin-bottom: 1rem;
-  color: #232b4d;
+  color: var(--text);
   display: flex;
   flex-direction: column;
   gap: 0.3em;
 }
 .balance-label {
   font-size: 1.2em;
-  color: #324058;
+  color: var(--secondary, #324058);
   margin-top: 2em;
   margin-bottom: 0.1em;
 }
 .balance-amount {
   font-size: 1.45em;
   font-weight: bold;
-  color: #232b4d;
+  color: var(--secondary, #232b4d);
   margin-bottom: 0.2em;
 }
 .card-stats {
@@ -125,7 +129,7 @@
   margin: 0.2em 0 0.3em 0;
 }
 .card-stats .up {
-  color: #00c6ae;
+  color: var(--primary, #00c6ae);
   font-weight: 600;
 }
 .card-stats .down {
@@ -140,11 +144,11 @@
   margin-top: 0.2em;
 }
 .card-meta b {
-  color: #232b4d;
+  color: var(--secondary, #232b4d);
   font-weight: 500;
 }
 .card-meta .active {
-  color: #00c6ae;
+  color: var(--primary, #00c6ae);
   font-weight: bold;
 }
 
