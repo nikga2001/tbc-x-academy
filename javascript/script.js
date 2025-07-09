@@ -1,7 +1,5 @@
-// Virtual Library System (Pure JavaScript)
-// No UI, no HTML/CSS, no libraries. All logic is in code.
 
-// --- Mock Data Initialization ---
+
 const users = [
   {
     name: "Alice",

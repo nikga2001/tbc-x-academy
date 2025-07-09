@@ -10,20 +10,23 @@
     <div class="dashboard-container">
       <!-- Navigation Bar -->
       <nav class="navbar">
-        <div class="nav-left">
-          <span class="logo">🏦 HaloBank</span>
-          <ul class="nav-links">
-            <li class="active">Overview</li>
-            <li>Cards</li>
-            <li>Transactions</li>
-            <li>Account</li>
-          </ul>
-        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <span class="logo">Bank Name</span>
+
+        <ul class="nav-links">
+          <li class="active">Overview</li>
+          <li>Cards</li>
+          <li>Transactions</li>
+          <li>Account</li>
+        </ul>
+
         <div class="nav-right">
-          <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-          <span class="avatar">
-            <img src="images/nika.jpg" alt="User" />
-          </span>
+          <button class="theme-toggle">🌙</button>
+          <div class="avatar">
+            <img src="images/nika.jpg" alt="Profile" />
+          </div>
         </div>
       </nav>
       <!-- Main Content -->
@@ -97,7 +100,6 @@
                 alt="User Photo"
                 class="avatar-img qt-avatar"
               />
-              <span class="avatar-img qt-avatar qt-add-avatar">+</span>
             </div>
             <hr class="qt-divider qt-gradient-divider" />
             <form class="transfer-form qt-form">
