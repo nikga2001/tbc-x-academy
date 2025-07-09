@@ -1,1 +1,83 @@
+/* Transactions History Styles */
+.transactions-history {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 24px;
+  margin-top: 24px;
+}
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.transactions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.transactions-list li {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.transaction-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  margin-right: 12px;
+  display: inline-block;
+}
+.transaction-title {
+  flex: 1;
+  font-weight: 500;
+}
+.transaction-date {
+  color: #aaa;
+  font-size: 0.95em;
+  margin-right: 16px;
+}
+.transaction-amount {
+  font-weight: bold;
+}
+.transaction-amount.negative {
+  color: #ff4d4f;
+}
+.view-more {
+  color: #1890ff;
+  text-decoration: none;
+  font-size: 0.95em;
+}
 
+/* Responsive Layout for center-grid */
+.center-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 600px) {
+  .center-grid {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .center-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+  }
+  .money-flow-section {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .transactions-history {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}

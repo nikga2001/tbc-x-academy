@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - MyBank</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/moneyflow.css" />
   </head>
   <body>
     <div class="dashboard-container">
@@ -151,7 +152,37 @@
               <b>$12,131</b>
             </div>
           </div>
+          <div class="main-grid">
+            <div class="money-flow">
+              <div class="moneyflow-header">
+                <span class="moneyflow-title">Money Flow</span>
+                <div class="moneyflow-controls">
+                  <select class="moneyflow-type">
+                    <option>Income</option>
+                    <option>Expense</option>
+                  </select>
+                  <select class="moneyflow-period">
+                    <option>Monthly</option>
+                    <option>Weekly</option>
+                  </select>
+                </div>
+              </div>
+              <div class="moneyflow-chart">
+                <img
+                  src="images/moneyflow.png"
+                  alt="Money Flow Chart"
+                  style="width: 100%; max-width: 320px"
+                />
+                <div class="moneyflow-value">+$1,990</div>
+              </div>
+            </div>
+            <!-- Placeholder for other grid items (e.g., My Savings, Transactions, All Expenses) -->
+            <div class="my-savings">My Savings (Coming soon)</div>
+            <div class="transactions">Transactions (Coming soon)</div>
+            <div class="all-expenses">All Expenses (Coming soon)</div>
+          </div>
         </section>
+        <section></section>
       </main>
     </div>
   </body>
