@@ -78,43 +78,57 @@
             <button class="add-card">Add New Card</button>
           </div>
           <div class="quick-transfer quick-transfer-card qt-modern">
-            <h3>Quick Transfer</h3>
-            <div class="transfer-avatars">
-              <img
-                src="images/maria.webp"
-                alt="User Photo"
-                class="avatar-img qt-avatar"
-              />
-              <img
-                src="images/gvanca.jpg"
-                alt="User Photo"
-                class="avatar-img qt-avatar"
-              />
-              <img
-                src="images/george.jpg"
-                alt="User Photo"
-                class="avatar-img qt-avatar"
-              />
-              <img
-                src="images/nicolas.avif"
-                alt="User Photo"
-                class="avatar-img qt-avatar"
-              />
-            </div>
-            <hr class="qt-divider qt-gradient-divider" />
-            <form class="transfer-form qt-form">
-              <div class="qt-input-wrapper">
-                <span class="qt-input-icon">💳</span>
-                <input type="text" placeholder="Card Number" value="" />
+            <div class="qt-header">
+              <h3 class="qt-title">Quick Transfer</h3>
+              <div class="qt-avatars-row">
+                <img
+                  src="images/maria.webp"
+                  alt="Maria"
+                  class="qt-avatar-img"
+                />
+                <img
+                  src="images/gvanca.jpg"
+                  alt="Gvanca"
+                  class="qt-avatar-img"
+                />
+                <img
+                  src="images/george.jpg"
+                  alt="George"
+                  class="qt-avatar-img"
+                />
+                <img
+                  src="images/nicolas.avif"
+                  alt="Nicolas"
+                  class="qt-avatar-img"
+                />
+                <div class="qt-avatar-img qt-avatar-add">+</div>
               </div>
+            </div>
+
+            <hr class="qt-divider qt-gradient-divider" />
+
+            <form class="qt-form">
+              <div class="qt-form-row">
+                <div class="qt-input-group">
+                  <input
+                    type="text"
+                    class="qt-input"
+                    placeholder="Recipient's Card Number"
+                  />
+                  <span class="qt-visa-badge">VISA</span>
+                </div>
+              </div>
+
               <div class="qt-helper-text">Enter recipient's card number</div>
-              <button type="button" class="visa-btn qt-pill">VISA</button>
-              <button type="submit" class="send-btn qt-gradient-btn">
-                Send Money
-              </button>
-              <button type="button" class="draft-btn qt-outline-btn">
-                Save as Draft
-              </button>
+
+              <div class="qt-btn-row">
+                <button type="submit" class="qt-btn qt-btn-primary">
+                  Send
+                </button>
+                <button type="button" class="qt-btn qt-btn-outline">
+                  Draft
+                </button>
+              </div>
             </form>
           </div>
         </section>

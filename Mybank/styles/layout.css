@@ -8,6 +8,7 @@
 
 .dashboard-main {
   display: flex;
+  flex-direction: row;
   gap: 2vw;
   padding: 2vw;
 }
@@ -62,39 +63,29 @@
   border-top: 10px solid #ef4444;
 }
 
-@media (max-width: 1024px) {
-  .left-col {
-    min-width: 260px;
-    /* width: auto; */
-  }
-  .center-col {
-    min-width: 320px;
-    /* width: auto; */
-  }
-  .summary-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 728px) {
+@media (max-width: 767px) {
   .dashboard-main {
     flex-direction: column;
     gap: 1.5em;
   }
   .left-col,
-  .center-col,
-  .right-col {
+  .center-col {
     min-width: 0;
     width: 100%;
+    margin-right: 0;
+    border-right: none;
+    padding-right: 0;
   }
-  .left-col {
-    margin-right: 10rem; /* მობილურზე აღარ იყოს დაშორება */
-  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
   .summary-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    padding-right: 2.5rem; /* დამატებული მარჯვენა დაშორება */
   }
 }

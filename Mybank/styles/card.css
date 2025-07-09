@@ -148,14 +148,15 @@
   font-weight: bold;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .card-stack {
-    max-width: 240px;
-    min-height: 120px;
+    max-width: 100vw; /* თითქმის მთელ ეკრანს იკავებს */
+    min-width: 90vw;
+    min-height: 220px;
   }
   .bank-card {
-    min-width: 200px;
-    min-height: 120px;
-    padding: 1rem 1.2rem 1rem 1.2rem;
+    min-width: 90vw !important;
+    min-height: 220px !important;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem !important;
   }
 }
