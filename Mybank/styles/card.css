@@ -151,12 +151,30 @@
 @media (max-width: 768px) {
   .card-stack {
     max-width: 100vw; /* თითქმის მთელ ეკრანს იკავებს */
-    min-width: 90vw;
-    min-height: 220px;
+    min-width: 80vw;
+    min-height: 160px;
   }
   .bank-card {
-    min-width: 90vw !important;
-    min-height: 220px !important;
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem !important;
+    min-width: 85vw !important;
+    min-height: 200px !important;
+    padding: 1.5rem 1rem 1rem 1rem !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-stack {
+    width: 100% !important;
+    max-width: 400px !important;
+    min-width: unset !important;
+    min-height: 180px;
+    box-sizing: border-box;
+  }
+  .bank-card {
+    width: 100% !important;
+    max-width: 400px !important;
+    min-width: unset !important;
+    min-height: 180px !important;
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem !important;
+    box-sizing: border-box;
   }
 }
