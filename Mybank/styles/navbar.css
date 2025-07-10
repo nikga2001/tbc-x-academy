@@ -116,7 +116,7 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: var(--card-bg);
     flex-direction: column;
     z-index: 99;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -128,7 +128,7 @@
 
   .nav-links li {
     padding: 1rem 2vw;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border);
   }
 }
 
