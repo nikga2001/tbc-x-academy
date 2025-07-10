@@ -54,9 +54,8 @@
 /* Desktop-specific styles (screens larger than 1024px) */
 @media (min-width: 1025px) {
   .money-flow {
-    width: 100%;
-    height: fit-content;
-    padding: 0.7rem 0.7rem 0.4rem 0.7rem !important;
+    width: 87%;
+    max-width: 597px;
   }
   .moneyflow-header {
     margin-bottom: 0.8rem !important;
@@ -110,27 +109,5 @@
   .moneyflow-value {
     font-size: 1rem;
     padding: 0.4rem 0.8rem;
-  }
-}
-
-@media (min-width: 1025px) {
-  .money-flow {
-    width: 100%;
-    height: fit-content;
-    padding: 0.7rem 0.7rem 0.4rem 0.7rem !important;
-  }
-  .moneyflow-header {
-    margin-bottom: 0.8rem !important;
-  }
-  .moneyflow-title {
-    font-size: 0.9rem !important;
-  }
-  .moneyflow-controls select {
-    padding: 0.2rem 0.5rem !important;
-    font-size: 0.9rem !important;
-  }
-  .moneyflow-value {
-    font-size: 0.8rem !important;
-    padding: 0.3rem 0.7rem !important;
   }
 }

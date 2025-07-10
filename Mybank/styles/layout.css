@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1039px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .summary-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
