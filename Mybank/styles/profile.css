@@ -1,0 +1,300 @@
+/************
+ Profile Page Styles
+************/
+
+body.light-mode {
+  background: #f5f6fa;
+  color: #222;
+}
+body.dark-mode {
+  background: #181a20;
+  color: #f5f6fa;
+}
+
+.navbar {
+  background: var(--navbar-bg, #fff);
+  color: var(--navbar-color, #222);
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode .navbar {
+  background: #23272f;
+  color: #f5f6fa;
+}
+body.light-mode .navbar {
+  background: #fff;
+  color: #222;
+}
+
+.profile-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 3rem auto 2rem auto;
+  max-width: 480px;
+  transition: background 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body.dark-mode .profile-container {
+  background: rgba(36, 37, 42, 0.98);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.profile-avatar {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.1);
+  border: 3px solid #eaf3fb;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.dark-mode .profile-avatar {
+  border: 3px solid #23272f;
+  background: #23272f;
+}
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-info {
+  flex: 1 1 120px;
+  min-width: 120px;
+}
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.2em 0;
+}
+.profile-email,
+.profile-phone {
+  font-size: 1rem;
+  color: #888;
+  margin: 0.1em 0;
+}
+body.dark-mode .profile-email,
+body.dark-mode .profile-phone {
+  color: #b3b3b3;
+}
+
+.edit-profile-btn {
+  background: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.edit-profile-btn:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #059669 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eaf3fb;
+  margin: 0.5em 0 1.5em 0;
+}
+body.dark-mode hr {
+  border-top: 1px solid #23272f;
+}
+
+.profile-details {
+  padding: 0.5em 0 0.5em 0;
+}
+.profile-details h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+.profile-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+.profile-details li {
+  font-size: 1rem;
+  color: #444;
+  background: #f5f6fa;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  transition: background 0.2s;
+}
+body.dark-mode .profile-details li {
+  color: #e5e7eb;
+  background: #23272f;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+  margin-top: 1.2em;
+  flex-wrap: wrap;
+}
+.change-password-btn,
+.logout-btn {
+  background: #fff;
+  color: #3b82f6;
+  border: 1.5px solid #3b82f6;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s;
+}
+.change-password-btn:hover,
+.logout-btn:hover {
+  background: #3b82f6;
+  color: #fff;
+  border-color: #2563eb;
+  transform: translateY(-2px) scale(1.04);
+}
+.logout-btn {
+  background: #fff;
+  color: #ef4444;
+  border: 1.5px solid #ef4444;
+}
+.logout-btn:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #b91c1c;
+}
+body.dark-mode .change-password-btn,
+body.dark-mode .logout-btn {
+  background: #23272f;
+}
+
+/* --- DARK MODE (CSS-only, theme switcher) --- */
+body:has(#theme-dark:checked) {
+  background: #181a20;
+  color: #f5f6fa;
+}
+body:has(#theme-dark:checked) .navbar {
+  background: #23272f;
+  color: #f5f6fa;
+}
+body:has(#theme-dark:checked) .profile-container {
+  background: rgba(36, 37, 42, 0.98);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
+}
+body:has(#theme-dark:checked) .profile-avatar {
+  border: 3px solid #23272f;
+  background: #23272f;
+}
+body:has(#theme-dark:checked) .profile-avatar img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+body:has(#theme-dark:checked) .profile-info {
+  flex: 1 1 120px;
+  min-width: 120px;
+}
+body:has(#theme-dark:checked) .profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.2em 0;
+}
+body:has(#theme-dark:checked) .profile-email,
+body:has(#theme-dark:checked) .profile-phone {
+  font-size: 1rem;
+  color: #b3b3b3;
+  margin: 0.1em 0;
+}
+body:has(#theme-dark:checked) .edit-profile-btn {
+  background: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+body:has(#theme-dark:checked) .edit-profile-btn:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #059669 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+}
+body:has(#theme-dark:checked) hr {
+  border-top: 1px solid #23272f;
+}
+body:has(#theme-dark:checked) .profile-details {
+  padding: 0.5em 0 0.5em 0;
+}
+body:has(#theme-dark:checked) .profile-details h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+body:has(#theme-dark:checked) .profile-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+body:has(#theme-dark:checked) .profile-details li {
+  font-size: 1rem;
+  color: #e5e7eb;
+  background: #23272f;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  transition: background 0.2s;
+}
+body:has(#theme-dark:checked) .profile-actions {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+  margin-top: 1.2em;
+  flex-wrap: wrap;
+}
+body:has(#theme-dark:checked) .change-password-btn,
+body:has(#theme-dark:checked) .logout-btn {
+  background: #23272f;
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .profile-actions {
+    flex-direction: column;
+    gap: 0.7em;
+    align-items: stretch;
+  }
+}

@@ -21,7 +21,7 @@
         <span class="logo">Bank Name</span>
 
         <ul class="nav-links">
-          <li class="active">Overview</li>
+          <li>Overview</li>
           <li>
             <a href="cards.html" style="text-decoration: none; color: inherit"
               >Cards</a
@@ -34,7 +34,11 @@
               >Transactions</a
             >
           </li>
-          <li>Account</li>
+          <li>
+            <a href="profile.html" style="text-decoration: none; color: inherit"
+              >Profile</a
+            >
+          </li>
         </ul>
 
         <div class="nav-right">
@@ -498,5 +502,24 @@
         <section></section>
       </main>
     </div>
+    <script>
+      // Theme switcher logic
+      const lightRadio = document.getElementById("theme-light");
+      const darkRadio = document.getElementById("theme-dark");
+      const body = document.body;
+      function setTheme(theme) {
+        if (theme === "dark") {
+          body.classList.add("dark-mode");
+          body.classList.remove("light-mode");
+        } else {
+          body.classList.add("light-mode");
+          body.classList.remove("dark-mode");
+        }
+      }
+      lightRadio.addEventListener("change", () => setTheme("light"));
+      darkRadio.addEventListener("change", () => setTheme("dark"));
+      // Set initial theme
+      setTheme("light");
+    </script>
   </body>
 </html>
