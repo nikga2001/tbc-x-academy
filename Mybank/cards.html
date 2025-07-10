@@ -7,6 +7,42 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/cards-page.css" />
   </head>
+  <script>
+    // Dark mode sync script for all pages
+    function applyTheme(theme) {
+      document.body.classList.toggle("dark", theme === "dark");
+      document.getElementById("theme-dark").checked = theme === "dark";
+      document.getElementById("theme-light").checked = theme === "light";
+    }
+    function getSavedTheme() {
+      return localStorage.getItem("theme") || "light";
+    }
+    function saveTheme(theme) {
+      localStorage.setItem("theme", theme);
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      // Set theme on load
+      const theme = getSavedTheme();
+      applyTheme(theme);
+      // Listen for theme switch
+      document
+        .getElementById("theme-light")
+        .addEventListener("change", function () {
+          if (this.checked) {
+            applyTheme("light");
+            saveTheme("light");
+          }
+        });
+      document
+        .getElementById("theme-dark")
+        .addEventListener("change", function () {
+          if (this.checked) {
+            applyTheme("dark");
+            saveTheme("dark");
+          }
+        });
+    });
+  </script>
   <body>
     <div class="dashboard-container">
       <!-- Navigation Bar -->

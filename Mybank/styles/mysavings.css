@@ -99,3 +99,19 @@
     padding: 0.7em 0.7em 0.5em 0.7em;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  /* წავშალე ეს სექცია, რადგან ქვემოთ ვამატებ :has სელექტორს */
+}
+
+body:has(#theme-dark:checked) .my-savings {
+  background: #181c24;
+}
+body:has(#theme-dark:checked) .savings-list li {
+  background: #232b4d;
+  color: #fff;
+}
+body:has(#theme-dark:checked) .savings-list .amount,
+body:has(#theme-dark:checked) .savings-list .goal-label {
+  color: #fff;
+}

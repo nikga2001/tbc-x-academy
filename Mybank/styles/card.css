@@ -152,6 +152,19 @@
   font-weight: bold;
 }
 
+/* Dark mode: make .card-info background black */
+body:has(#theme-dark:checked) .card-info {
+  background: #11121333 !important;
+}
+body:has(#theme-dark:checked) .transactions-box,
+body:has(#theme-dark:checked) .money-flow-box,
+body:has(#theme-dark:checked) .my-savings-box,
+body:has(#theme-dark:checked) .expenses-box {
+  background: #18191a !important;
+  color: #fff !important;
+  box-shadow: 0 2px 16px #0002;
+}
+
 @media (max-width: 768px) {
   .card-stack {
     max-width: 100vw; /* თითქმის მთელ ეკრანს იკავებს */
