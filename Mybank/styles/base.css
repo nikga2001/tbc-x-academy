@@ -18,6 +18,7 @@ body {
   --primary: #00c6ae;
   --secondary: #232b4d;
   --border: #eee;
+  --text-secondary: #6b7280;
 }
 
 body {
@@ -67,4 +68,5 @@ body:has(#theme-dark:checked) {
   --primary: #00c6ae;
   --secondary: #00c6ae;
   --border: #232b4d;
+  --text-secondary: #b0b8c9;
 }
