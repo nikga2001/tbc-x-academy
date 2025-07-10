@@ -1,5 +1,3 @@
-
-
 const users = [
   {
     name: "Alice",
@@ -188,6 +186,82 @@ function printUserSummary(userName) {
   };
 }
 
+// Money Flow Chart.js
+function renderMoneyflowChart(theme = "light") {
+  const ctx = document.getElementById("moneyflowChart");
+  if (!ctx) return;
+  if (window.moneyflowChartInstance) {
+    window.moneyflowChartInstance.destroy();
+  }
+  const isDark = theme === "dark";
+  window.moneyflowChartInstance = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      datasets: [
+        {
+          label: "Money Flow",
+          data: [2000, 2200, 6000, 4000, 1800, 1990],
+          borderColor: isDark ? "#4fd1c5" : "#06b6d4",
+          backgroundColor: isDark
+            ? "rgba(79,209,197,0.15)"
+            : "rgba(6,182,212,0.15)",
+          pointBackgroundColor: isDark ? "#fff" : "#222",
+          pointBorderColor: isDark ? "#4fd1c5" : "#06b6d4",
+          tension: 0.4,
+          fill: true,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: isDark ? "#232733" : "#fff",
+          titleColor: isDark ? "#fff" : "#222",
+          bodyColor: isDark ? "#fff" : "#222",
+        },
+      },
+      scales: {
+        x: {
+          ticks: { color: isDark ? "#fff" : "#222" },
+          grid: {
+            color: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
+          },
+        },
+        y: {
+          ticks: { color: isDark ? "#fff" : "#222" },
+          grid: {
+            color: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
+          },
+        },
+      },
+    },
+  });
+}
+
+// Detect theme
+function getTheme() {
+  if (document.getElementById("theme-dark").checked) return "dark";
+  return "light";
+}
+
+// Initial render
+window.addEventListener("DOMContentLoaded", function () {
+  renderMoneyflowChart(getTheme());
+});
+
+// Theme switcher support
+const themeRadios = document.querySelectorAll('input[name="theme"]');
+themeRadios.forEach((radio) => {
+  radio.addEventListener("change", () => {
+    const theme = getTheme();
+    document.body.classList.toggle("dark-mode", theme === "dark");
+    renderMoneyflowChart(theme);
+  });
+});
+
 // --- Example Usage (Uncomment to test in Node.js) ---
 // console.log(borrowBook('Alice', 1));
 // console.log(returnBook('Alice', 1));
@@ -197,3 +271,23 @@ function printUserSummary(userName) {
 // console.log(checkOverdueUsers());
 // console.log(recommendBooks('Alice'));
 // console.log(printUserSummary('Alice'));
+
+// Theme switcher for dashboard
+const themeLight = document.getElementById("theme-light");
+const themeDark = document.getElementById("theme-dark");
+const body = document.body;
+
+if (themeLight && themeDark) {
+  themeLight.addEventListener("change", () => {
+    if (themeLight.checked) {
+      body.classList.add("light");
+      body.classList.remove("dark");
+    }
+  });
+  themeDark.addEventListener("change", () => {
+    if (themeDark.checked) {
+      body.classList.add("dark");
+      body.classList.remove("light");
+    }
+  });
+}

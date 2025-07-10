@@ -214,31 +214,137 @@
             </div>
 
             <div class="money-flow money-flow-box">
-              <div class="moneyflow-header">
-                <span class="moneyflow-title">Money Flow</span>
-                <div class="moneyflow-controls">
-                  <select class="moneyflow-type">
-                    <option>Income</option>
-                    <option>Expense</option>
-                  </select>
-                  <select class="moneyflow-period">
-                    <option>Monthly</option>
-                    <option>Weekly</option>
-                  </select>
+              <div class="moneyflow-header" style="justify-content: center">
+                <span
+                  class="moneyflow-title"
+                  style="font-size: 1.1rem; font-weight: 700"
+                  >Money Flow</span
+                >
+              </div>
+              <div
+                class="moneyflow-bars"
+                style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.2rem;
+                  justify-content: center;
+                "
+              >
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <span style="color: #10b981; font-weight: 600">Salary</span>
+                    <span style="font-weight: 600">$1,500</span>
+                  </div>
+                  <div
+                    style="
+                      background: #eafaf1;
+                      border-radius: 8px;
+                      height: 14px;
+                      width: 100%;
+                      margin-top: 0.3rem;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #10b981;
+                        width: 80%;
+                        height: 100%;
+                        border-radius: 8px;
+                        transition: width 1s;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <span style="color: #3b82f6; font-weight: 600"
+                      >Freelance</span
+                    >
+                    <span style="font-weight: 600">$700</span>
+                  </div>
+                  <div
+                    style="
+                      background: #eaf3fb;
+                      border-radius: 8px;
+                      height: 14px;
+                      width: 100%;
+                      margin-top: 0.3rem;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #3b82f6;
+                        width: 50%;
+                        height: 100%;
+                        border-radius: 8px;
+                        transition: width 1s;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <span style="color: #ef4444; font-weight: 600"
+                      >Shopping</span
+                    >
+                    <span style="font-weight: 600">$400</span>
+                  </div>
+                  <div
+                    style="
+                      background: #fde8e8;
+                      border-radius: 8px;
+                      height: 14px;
+                      width: 100%;
+                      margin-top: 0.3rem;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #ef4444;
+                        width: 30%;
+                        height: 100%;
+                        border-radius: 8px;
+                        transition: width 1s;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <span style="color: #f59e42; font-weight: 600">Food</span>
+                    <span style="font-weight: 600">$200</span>
+                  </div>
+                  <div
+                    style="
+                      background: #fff7ed;
+                      border-radius: 8px;
+                      height: 14px;
+                      width: 100%;
+                      margin-top: 0.3rem;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #f59e42;
+                        width: 15%;
+                        height: 100%;
+                        border-radius: 8px;
+                        transition: width 1s;
+                      "
+                    ></div>
+                  </div>
                 </div>
               </div>
-              <div class="moneyflow-chart">
-                <img
-                  src="images/moneyflow.png"
-                  alt="Money Flow Chart"
-                  style="
-                    width: 100%;
-                    max-width: 1000px;
-                    height: auto;
-                    margin-left: -15%;
-                  "
-                />
-                <div class="moneyflow-value">+$1,990</div>
+              <div
+                style="
+                  margin-top: 1.5rem;
+                  text-align: center;
+                  color: #888;
+                  font-size: 14px;
+                "
+              >
+                Income & Expense breakdown by category
               </div>
             </div>
             <!-- Placeholder for other grid items (e.g., My Savings, Transactions, All Expenses) -->
