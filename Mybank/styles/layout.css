@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1039px) {
   .summary-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,6 +115,16 @@
     gap: 2rem;
     justify-items: center;
     align-items: center;
-    padding-right: 2.5rem; /* დამატებული მარჯვენა დაშორება */
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1040px) {
+  .summary-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding-right: 0;
   }
 }

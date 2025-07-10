@@ -153,6 +153,10 @@
   font-weight: bold;
   font-size: 1.1em;
 }
+
+body:has(#theme-dark:checked) .stat-value {
+  color: #fff;
+}
 .expenses-chart {
   position: relative;
   display: flex;
@@ -263,6 +267,17 @@
 }
 .category-value {
   font-weight: bold;
-  color: #232b4d;
   margin-left: 0.7em;
+}
+.category-value.blue {
+  color: #3b82f6;
+}
+.category-value.green {
+  color: #10b981;
+}
+.category-value.orange {
+  color: #f59e42;
+}
+.category-value.red {
+  color: #ef4444;
 }

@@ -24,6 +24,11 @@
   margin: 0;
 }
 
+.light-mode .cards-header h1,
+.light-mode .cards-header p {
+  color: #232b4d;
+}
+
 /* Cards Grid */
 .cards-grid {
   display: grid;

@@ -222,10 +222,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.transaction-item:hover {
-  background: #f8f9fa;
-}
-
 .transaction-item:last-child {
   border-bottom: none;
   margin-bottom: 0;
