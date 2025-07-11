@@ -158,39 +158,101 @@
 @media (max-width: 900px) {
   .quick-transfer {
     max-width: 100%;
+    padding: 1.5em 1.2em 1.2em 1.2em;
+  }
+  .qt-header {
+    gap: 0.6em;
+  }
+  .qt-title {
+    font-size: 1.15em;
+  }
+  .qt-avatars-row {
+    gap: 0.6em;
+  }
+  .qt-avatar-img {
+    width: 34px;
+    height: 34px;
+    font-size: 1.15em;
+  }
+  .qt-avatar-img.qt-avatar-add {
+    font-size: 1.3em;
+  }
+  .qt-form-row {
+    flex-direction: column;
+    gap: 0.8em;
+  }
+  .qt-btn-row {
+    flex-direction: row;
+    gap: 0.8em;
+    justify-content: space-between;
+  }
+  .qt-btn {
+    flex: 1;
+    padding: 0.8em 1.5em;
+  }
+}
+@media (max-width: 768px) {
+  .quick-transfer {
     padding: 1.2em 1em 1em 1em;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px #232b4d18;
+    margin-top: 1.5em;
   }
   .qt-header {
     gap: 0.5em;
   }
   .qt-title {
-    font-size: 1.1em;
+    font-size: 1.05em;
   }
   .qt-avatars-row {
     gap: 0.5em;
   }
   .qt-avatar-img {
-    width: 32px;
-    height: 32px;
-    font-size: 1.1em;
+    width: 30px;
+    height: 30px;
+    font-size: 1.05em;
   }
   .qt-avatar-img.qt-avatar-add {
-    font-size: 1.2em;
+    font-size: 1.1em;
+  }
+  .qt-form {
+    gap: 0.8em;
   }
   .qt-form-row {
-    flex-direction: column;
-    gap: 0.5em;
+    gap: 0.6em;
+  }
+  .qt-input {
+    padding: 0.8em 3em 0.8em 0.9em;
+    font-size: 0.95em;
+  }
+  .qt-visa-badge {
+    font-size: 0.85em;
+    padding: 0.25em 0.6em;
+    right: 0.8em;
+  }
+  .qt-helper-text {
+    font-size: 0.9em;
+    margin-top: -0.5em;
+    margin-bottom: 0.3em;
   }
   .qt-btn-row {
     flex-direction: column;
-    gap: 0.5em;
+    gap: 0.6em;
+  }
+  .qt-btn {
+    padding: 0.75em 1.5em;
+    font-size: 0.95em;
+    width: 100%;
+  }
+  /* Hide helper text on mobile to prevent overlap */
+  .qt-helper-text {
+    display: none;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .quick-transfer {
-    padding: 1em 0.5em 0.7em 0.5em;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px #232b4d18;
+    padding: 1em 0.8em 0.8em 0.8em;
+    margin-top: 1em;
   }
   .qt-title {
     font-size: 1em;
@@ -203,11 +265,17 @@
   .qt-avatar-img.qt-avatar-add {
     font-size: 1em;
   }
-  .qt-form {
-    gap: 0.7em;
+  .qt-input {
+    padding: 0.7em 2.5em 0.7em 0.8em;
+    font-size: 0.9em;
+  }
+  .qt-visa-badge {
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+    right: 0.7em;
   }
   .qt-btn {
-    padding: 0.6em 1.2em;
-    font-size: 0.98em;
+    padding: 0.7em 1.2em;
+    font-size: 0.9em;
   }
 }
