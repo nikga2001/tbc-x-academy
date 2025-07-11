@@ -211,6 +211,46 @@ body {
   font-size: 0.95rem;
 }
 
+/* Transaction Groups */
+.transaction-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.date-group {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.date-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.date-summary {
+  color: var(--text-secondary, #64748b);
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: rgba(0, 198, 174, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 198, 174, 0.2);
+}
+
 /* Transaction Items */
 .transaction-item {
   display: flex;
@@ -218,13 +258,15 @@ body {
   padding: 1.5rem;
   border-bottom: 1px solid #f3f4f6;
   transition: background 0.3s ease;
-  border-radius: 12px;
-  margin-bottom: 0.5rem;
+  background: var(--card-bg);
 }
 
 .transaction-item:last-child {
   border-bottom: none;
-  margin-bottom: 0;
+}
+
+.transaction-item:hover {
+  background: #f8fafc;
 }
 
 .transaction-icon {
@@ -261,9 +303,10 @@ body {
   font-size: 0.95rem;
 }
 
-.transaction-date {
-  color: var(--text-secondary, #b0b8c9);
-  font-size: 0.9rem;
+.transaction-time {
+  color: var(--text-secondary, #94a3b8);
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .transaction-amount {
@@ -467,6 +510,34 @@ body {
     font-size: 1.2rem;
   }
 
+  /* Transaction Groups */
+  .transaction-groups {
+    gap: 1rem;
+  }
+
+  .date-group {
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .date-header {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .date-label {
+    font-size: 1rem;
+  }
+
+  .date-summary {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+
   /* Transaction Items */
   .transaction-item {
     flex-direction: column;
@@ -496,7 +567,7 @@ body {
     font-size: 0.9rem;
   }
 
-  .transaction-date {
+  .transaction-time {
     font-size: 0.85rem;
   }
 
@@ -642,6 +713,31 @@ body {
     font-size: 0.85rem;
   }
 
+  /* Transaction Groups */
+  .transaction-groups {
+    gap: 0.75rem;
+  }
+
+  .date-group {
+    border-radius: 10px;
+  }
+
+  .date-header {
+    padding: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .date-label {
+    font-size: 0.95rem;
+  }
+
+  .date-summary {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+  }
+
   .transaction-item {
     padding: 1rem;
     gap: 0.75rem;
@@ -661,7 +757,7 @@ body {
     font-size: 0.85rem;
   }
 
-  .transaction-date {
+  .transaction-time {
     font-size: 0.8rem;
   }
 
@@ -687,4 +783,37 @@ body {
     font-size: 0.85rem;
     min-width: 32px;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  .date-header {
+    background: linear-gradient(135deg, #23263a 0%, #2d314d 100%) !important;
+  }
+  .date-label {
+    color: #23263a !important;
+    font-weight: 700;
+    text-shadow: none !important;
+  }
+  .date-header .date-summary {
+    color: #374151 !important;
+    background: rgba(0, 198, 174, 0.15);
+    border: 1px solid rgba(0, 198, 174, 0.25);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Make date label always dark and bold */
+.date-label {
+  color: #23263a !important;
+  font-weight: 700;
+  text-shadow: none !important;
+}
+
+/* Remove hover effects from transaction-item and transaction-icon */
+.transaction-item:hover {
+  background: var(--card-bg) !important;
+}
+.transaction-item:hover .transaction-icon {
+  transform: none !important;
 }
