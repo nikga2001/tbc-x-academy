@@ -23,6 +23,7 @@ const books = [
     author: "Douglas Crockford",
     genre: "Programming",
     rating: 4.7,
+    year: 2008,
     borrowCount: 0,
     available: true,
   },
@@ -32,6 +33,7 @@ const books = [
     author: "Robert C. Martin",
     genre: "Programming",
     rating: 4.8,
+    year: 2009,
     borrowCount: 0,
     available: true,
   },
@@ -41,6 +43,7 @@ const books = [
     author: "J.R.R. Tolkien",
     genre: "Fantasy",
     rating: 4.6,
+    year: 1937,
     borrowCount: 0,
     available: true,
   },
@@ -50,24 +53,28 @@ const books = [
     author: "George Orwell",
     genre: "Dystopian",
     rating: 4.5,
+    year: 1949,
     borrowCount: 0,
     available: true,
   },
 ];
 
-// --- Helper Functions ---
+/** Finds user by name */
 function findUser(userName) {
   return users.find((u) => u.name === userName);
 }
+
+/** Finds book by ID */
 function findBook(bookId) {
   return books.find((b) => b.id === bookId);
 }
 
-// --- Core Functionality ---
+/** Adds new book */
 function addBook(book) {
   books.push({ ...book, borrowCount: 0, available: true });
 }
 
+/** Removes book only if not borrowed */
 function removeBook(bookId) {
   const book = findBook(bookId);
   if (!book) return "Book not found.";
@@ -77,11 +84,18 @@ function removeBook(bookId) {
   return "Book removed.";
 }
 
+/** Borrows a book if available and not already borrowed by same user */
 function borrowBook(userName, bookId) {
   const user = findUser(userName);
   const book = findBook(bookId);
   if (!user || !book) return "User or book not found.";
   if (!book.available) return "Book is not available.";
+
+  const alreadyBorrowed = user.borrowed.some(
+    (b) => b.bookId === bookId && !b.returnedDate
+  );
+  if (alreadyBorrowed) return "You already borrowed this book.";
+
   const now = new Date();
   const due = new Date(now);
   due.setDate(now.getDate() + 14);
@@ -96,6 +110,7 @@ function borrowBook(userName, bookId) {
   return "Book borrowed.";
 }
 
+/** Returns a book and checks for penalty */
 function returnBook(userName, bookId) {
   const user = findUser(userName);
   const book = findBook(bookId);
@@ -114,14 +129,19 @@ function returnBook(userName, bookId) {
   return "Thank you for returning on time!";
 }
 
+/** Filters books by a parameter (author, genre, rating, year) */
 function searchBooksBy(param, value) {
   return books.filter((book) => {
     if (param === "rating") return book.rating >= value;
     if (param === "year") return book.year && book.year >= value;
-    return book[param] && book[param] === value;
+    return (
+      book[param] &&
+      book[param].toString().toLowerCase() === value.toString().toLowerCase()
+    );
   });
 }
 
+/** Returns top N books by rating */
 function getTopRatedBooks(limit) {
   return books
     .slice()
@@ -129,6 +149,7 @@ function getTopRatedBooks(limit) {
     .slice(0, limit);
 }
 
+/** Returns top N most borrowed books */
 function getMostPopularBooks(limit) {
   return books
     .slice()
@@ -136,6 +157,7 @@ function getMostPopularBooks(limit) {
     .slice(0, limit);
 }
 
+/** Lists users with overdue books and days overdue */
 function checkOverdueUsers() {
   const now = new Date();
   return users
@@ -155,6 +177,7 @@ function checkOverdueUsers() {
     .filter(Boolean);
 }
 
+/** Suggests books based on user's borrowed genres */
 function recommendBooks(userName) {
   const user = findUser(userName);
   if (!user) return [];
@@ -166,9 +189,15 @@ function recommendBooks(userName) {
       })
       .filter(Boolean)
   );
-  return books.filter((b) => b.available && borrowedGenres.has(b.genre));
+
+  const readBookIds = new Set(user.borrowed.map((b) => b.bookId));
+
+  return books.filter(
+    (b) => b.available && borrowedGenres.has(b.genre) && !readBookIds.has(b.id)
+  );
 }
 
+/** Shows borrowed books, overdue books, and penalty points */
 function printUserSummary(userName) {
   const user = findUser(userName);
   if (!user) return "User not found.";
@@ -186,83 +215,7 @@ function printUserSummary(userName) {
   };
 }
 
-// Money Flow Chart.js
-function renderMoneyflowChart(theme = "light") {
-  const ctx = document.getElementById("moneyflowChart");
-  if (!ctx) return;
-  if (window.moneyflowChartInstance) {
-    window.moneyflowChartInstance.destroy();
-  }
-  const isDark = theme === "dark";
-  window.moneyflowChartInstance = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-      datasets: [
-        {
-          label: "Money Flow",
-          data: [2000, 2200, 6000, 4000, 1800, 1990],
-          borderColor: isDark ? "#4fd1c5" : "#06b6d4",
-          backgroundColor: isDark
-            ? "rgba(79,209,197,0.15)"
-            : "rgba(6,182,212,0.15)",
-          pointBackgroundColor: isDark ? "#fff" : "#222",
-          pointBorderColor: isDark ? "#4fd1c5" : "#06b6d4",
-          tension: 0.4,
-          fill: true,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: isDark ? "#232733" : "#fff",
-          titleColor: isDark ? "#fff" : "#222",
-          bodyColor: isDark ? "#fff" : "#222",
-        },
-      },
-      scales: {
-        x: {
-          ticks: { color: isDark ? "#fff" : "#222" },
-          grid: {
-            color: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
-          },
-        },
-        y: {
-          ticks: { color: isDark ? "#fff" : "#222" },
-          grid: {
-            color: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
-          },
-        },
-      },
-    },
-  });
-}
-
-// Detect theme
-function getTheme() {
-  if (document.getElementById("theme-dark").checked) return "dark";
-  return "light";
-}
-
-// Initial render
-window.addEventListener("DOMContentLoaded", function () {
-  renderMoneyflowChart(getTheme());
-});
-
-// Theme switcher support
-const themeRadios = document.querySelectorAll('input[name="theme"]');
-themeRadios.forEach((radio) => {
-  radio.addEventListener("change", () => {
-    const theme = getTheme();
-    document.body.classList.toggle("dark-mode", theme === "dark");
-    renderMoneyflowChart(theme);
-  });
-});
-
-// --- Example Usage (Uncomment to test in Node.js) ---
+// Example usage (Uncomment for testing)
 // console.log(borrowBook('Alice', 1));
 // console.log(returnBook('Alice', 1));
 // console.log(searchBooksBy('author', 'J.R.R. Tolkien'));
@@ -271,23 +224,3 @@ themeRadios.forEach((radio) => {
 // console.log(checkOverdueUsers());
 // console.log(recommendBooks('Alice'));
 // console.log(printUserSummary('Alice'));
-
-// Theme switcher for dashboard
-const themeLight = document.getElementById("theme-light");
-const themeDark = document.getElementById("theme-dark");
-const body = document.body;
-
-if (themeLight && themeDark) {
-  themeLight.addEventListener("change", () => {
-    if (themeLight.checked) {
-      body.classList.add("light");
-      body.classList.remove("dark");
-    }
-  });
-  themeDark.addEventListener("change", () => {
-    if (themeDark.checked) {
-      body.classList.add("dark");
-      body.classList.remove("light");
-    }
-  });
-}
