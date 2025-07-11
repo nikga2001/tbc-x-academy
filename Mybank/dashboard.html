@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="styles/mysavings.css" />
     <style>
       /* Desktop-specific styles for money-flow (highest priority) */
+      /* Light Theme (default) */
+      body,
+      #theme-light:checked ~ main,
+      #theme-light:checked ~ .dashboard-main {
+        background: #f5f6fa;
+        color: #222;
+      }
+      /* Dark Theme */
+      #theme-dark:checked ~ main,
+      #theme-dark:checked ~ .dashboard-main,
+      #theme-dark:checked ~ body {
+        background: #181a20;
+        color: #f5f6fa;
+      }
+      /* Example: navbar color */
+      #theme-dark:checked ~ .dashboard-container .navbar {
+        background: #23262f;
+        color: #f5f6fa;
+      }
+      #theme-light:checked ~ .dashboard-container .navbar {
+        background: #fff;
+        color: #222;
+      }
+      /* Add more selectors as needed for other elements */
     </style>
   </head>
   <body>
@@ -49,6 +73,7 @@
             <label for="theme-dark" title="Dark mode">🌙</label>
           </div>
           <div class="avatar">
+            <span class="profile-name-navbar">N.s</span>
             <img src="images/nika.jpg" alt="Profile" />
           </div>
         </div>
@@ -502,24 +527,5 @@
         <section></section>
       </main>
     </div>
-    <script>
-      // Theme switcher logic
-      const lightRadio = document.getElementById("theme-light");
-      const darkRadio = document.getElementById("theme-dark");
-      const body = document.body;
-      function setTheme(theme) {
-        if (theme === "dark") {
-          body.classList.add("dark-mode");
-          body.classList.remove("light-mode");
-        } else {
-          body.classList.add("light-mode");
-          body.classList.remove("dark-mode");
-        }
-      }
-      lightRadio.addEventListener("change", () => setTheme("light"));
-      darkRadio.addEventListener("change", () => setTheme("dark"));
-      // Set initial theme
-      setTheme("light");
-    </script>
   </body>
 </html>
