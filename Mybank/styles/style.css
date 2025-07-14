@@ -6,3 +6,26 @@
 @import url("./transactions.css");
 @import url("./expenses.css");
 @import url("./responsive.css");
+
+body,
+#theme-light:checked ~ main,
+#theme-light:checked ~ .dashboard-main {
+  background: #f5f6fa;
+  color: #222;
+}
+/* Dark Theme */
+#theme-dark:checked ~ main,
+#theme-dark:checked ~ .dashboard-main,
+#theme-dark:checked ~ body {
+  background: #181a20;
+  color: #f5f6fa;
+}
+/* Example: navbar color */
+#theme-dark:checked ~ .dashboard-container .navbar {
+  background: #23262f;
+  color: #f5f6fa;
+}
+#theme-light:checked ~ .dashboard-container .navbar {
+  background: #fff;
+  color: #222;
+}

@@ -216,11 +216,11 @@ function printUserSummary(userName) {
 }
 
 // Example usage (Uncomment for testing)
-console.log(borrowBook("Alice", 1));
-console.log(returnBook("Alice", 1));
-console.log(searchBooksBy("author", "J.R.R. Tolkien"));
-console.log(getTopRatedBooks(2));
-console.log(getMostPopularBooks(2));
-console.log(checkOverdueUsers());
-console.log(recommendBooks("Alice"));
-console.log(printUserSummary("Alice"));
+// console.log(borrowBook("Alice", 1));
+// console.log(returnBook("Alice", 1));
+// console.log(searchBooksBy("author", "J.R.R. Tolkien"));
+// console.log(getTopRatedBooks(2));
+// console.log(getMostPopularBooks(2));
+// console.log(checkOverdueUsers());
+// console.log(recommendBooks("Alice"));
+// console.log(printUserSummary("Alice"));
