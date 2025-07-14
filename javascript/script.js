@@ -16,7 +16,7 @@ const users = [
   },
 ];
 
-const books = [
+let books = [
   {
     id: 1,
     title: "JavaScript: The Good Parts",
@@ -79,8 +79,7 @@ function removeBook(bookId) {
   const book = findBook(bookId);
   if (!book) return "Book not found.";
   if (!book.available) return "Book is currently borrowed.";
-  const idx = books.findIndex((b) => b.id === bookId);
-  books.splice(idx, 1);
+  books = books.filter((b) => b.id !== bookId);
   return "Book removed.";
 }
 
