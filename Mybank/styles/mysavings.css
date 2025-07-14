@@ -101,7 +101,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  /* წავშალე ეს სექცია, რადგან ქვემოთ ვამატებ :has სელექტორს */
 }
 
 body:has(#theme-dark:checked) .my-savings {

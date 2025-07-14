@@ -810,7 +810,6 @@ body {
   text-shadow: none !important;
 }
 
-/* Remove hover effects from transaction-item and transaction-icon */
 .transaction-item:hover {
   background: var(--card-bg) !important;
 }
