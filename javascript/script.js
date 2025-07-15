@@ -214,7 +214,6 @@ function printUserSummary(userName) {
   };
 }
 
-// Example usage (Uncomment for testing)
 // console.log(borrowBook("Alice", 1));
 // console.log(returnBook("Alice", 1));
 // console.log(searchBooksBy("author", "J.R.R. Tolkien"));
